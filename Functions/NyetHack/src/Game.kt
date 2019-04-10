@@ -4,17 +4,38 @@ fun main(args: Array<String>) {
     var healthPoints = 89
     val isBlessed = true
     val isImmortal = false
-    val auraVisible = isBlessed && healthPoints > 50 || isImmortal
-
-    val auraColor = if (auraVisible) "GREEN" else "NONE"
+    val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
 
     val healthStatus = formatHealthStatus(healthPoints, isBlessed)
 
-    println("(Aura: $auraColor)" +
-            "(Blessed: ${if (isBlessed) "YES" else "NO"})")
-    println("$name $healthStatus")
+    printPlayerStatus(auraColor, isBlessed, name, healthStatus)
+
+    castFireball()
 
 }//main
+
+private fun castFireball(){
+    println("A glass of Fireball springs into existence.")
+}//castFireball
+
+private fun printPlayerStatus(
+    auraColor: String,
+    isBlessed: Boolean,
+    name: String,
+    healthStatus: String
+) {
+    println(
+        "(Aura: $auraColor)" +
+                "(Blessed: ${if (isBlessed) "YES" else "NO"})"
+    )
+    println("$name $healthStatus")
+}//printPlayerStatus
+
+private fun auraColor(isBlessed: Boolean, healthPoints: Int, isImmortal: Boolean): String {
+    val auraVisible = isBlessed && healthPoints > 50 || isImmortal
+    val auraColor = if (auraVisible) "GREEN" else "NONE"
+    return auraColor
+}//auraColor
 
 private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
     val healthStatus = when (healthPoints) {
@@ -29,4 +50,4 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
         else -> "is in awful condition"
     }
     return healthStatus
-}
+}//formatHealthStatus
