@@ -1,12 +1,13 @@
 fun main(args: Array<String>) {
 
     val name = "addick"
-    var healthPoints = 89
+    var healthPoints = (Math.random() * 100).toInt()
     val isBlessed = true
     val isImmortal = false
     val auraVisible = isBlessed && healthPoints > 50 || isImmortal
 
-    //Challenge
+
+    //Challenge Enhancing the Aura
     val karma = (Math.pow(Math.random(), (110 - healthPoints) / 100.0) * 20).toInt()
 
     val auraColor = when (karma) {
@@ -29,8 +30,9 @@ fun main(args: Array<String>) {
         else -> "is in awful condition"
     }
 
-    println("(Aura: $auraColor)" +
-            "(Blessed: ${if (isBlessed) "YES" else "NO"})")
-    println("$name $healthStatus")
+    //Challenge Configurable Status Format
+    val statusFormatString ="(HP: $healthPoints)(Aura: $auraColor) -> $name $healthStatus"
+
+    println(statusFormatString)
 
 }//main
