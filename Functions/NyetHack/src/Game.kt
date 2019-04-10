@@ -10,11 +10,11 @@ fun main(args: Array<String>) {
 
     printPlayerStatus(auraColor, isBlessed, name, healthStatus)
 
-    castFireball(5)
+    castFireball()
 
 }//main
 
-private fun castFireball(numFireballs: Int){
+private fun castFireball(numFireballs: Int = 2){
     println("A glass of Fireball springs into existence. (x$numFireballs)")
 }//castFireball
 
