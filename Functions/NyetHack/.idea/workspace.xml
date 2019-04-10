@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2036d56c-6187-4e7f-930c-983f47730c7b" name="Default Changelist" comment="" />
+    <list default="true" id="7b34aeb9-dd29-4a9a-9683-a855045ac231" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Game.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Conditionals/NyetHack_ConditionalsChallenges/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Conditionals/NyetHack_ConditionalsChallenges/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,13 +21,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="493">
+              <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -54,29 +64,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="NyetHack_ConditionalsChallenges" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NyetHack_ConditionalsChallenges" type="462c0819:PsiDirectoryNode" />
+              <item name="NyetHack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NyetHack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NyetHack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NyetHack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\addic\Desarrollo\Kotlin\Repositorios\KotlinStudy\Conditionals\NyetHack_ConditionalsChallenges\src" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Conditionals/src/Game.kt" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -90,36 +99,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="GameKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="NyetHack_ConditionalsChallenges" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="GameKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Kotlin.GameKt" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2036d56c-6187-4e7f-930c-983f47730c7b" name="Default Changelist" comment="" />
-      <created>1554922527172</created>
+      <changelist id="7b34aeb9-dd29-4a9a-9683-a855045ac231" name="Default Changelist" comment="" />
+      <created>1554927852858</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1554922527172</updated>
+      <updated>1554927852858</updated>
     </task>
     <servers />
   </component>
@@ -132,15 +121,14 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15503356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -156,10 +144,20 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../Conditionals/Conditionals.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Conditionals/src/Game.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="493">
+          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
         </state>
       </provider>
     </entry>
