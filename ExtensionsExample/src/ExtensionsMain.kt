@@ -30,6 +30,6 @@ fun main(args: Array<String>) {
     //infix fun
     val myInfixFun = 3 times "Beetlejuice "
     println("infix times: $myInfixFun")
-    
+
 
 }//main
