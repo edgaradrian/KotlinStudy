@@ -26,5 +26,12 @@ fun main(args: Array<String>) {
 
     println(itGreetingFunction("addickted"))
 
+    val multipleGreetingFunction: (String, Int) -> String = { player, buildings ->
+        println("Adding $buildings houses")
+        val currentYear = 2019
+        "Welcome to SimVillage, $player (copyright $currentYear)"
+    }//multipleGreetinfFunction
+
+    println(multipleGreetingFunction("Edgar Adrian", 3))
 
 }//main
