@@ -1,13 +1,10 @@
 import kotlin.math.*
+import kotlin.random.Random
 
 fun main(args: Array<String>) {
     println("^^^^^^Hello Kotlin^^^^^^")
 
     maths()
-
-    println(">>>Variables and Constants")
-    val myAge:Int = 32
-    println("My age: $myAge")
 
     exercisesChapter2()
 
@@ -28,11 +25,72 @@ fun main(args: Array<String>) {
     charactersAndStrings()
     pairAndTriples()
 
-    println(">>>Any, Unit and Nothing Types")
-    val anyNumber: Any = 42
-    val anyString: Any = "42"
+    ChallengesChapter3()
+
+    miniExercisesChapter4()
+
+    println(">>>IF Expression")
+    val animal = "Fox"
+
+    if (animal == "Cat" || animal == "Dog" ) {
+        println("Animal is a house pet")
+    } else {
+        println("Animal is not a house pet")
+    }
+    println(">>mini exercises")
+    println(">1")
+    val myAge = 32
+    if (myAge in 13..19) {
+        println("I am a teenage")
+    } else {
+        println("I am not a teenage")
+    }//if myAge
+    println(">>>WHILE mini exercises")
+    var counter = 0
+    while (counter < 10) {
+        println("counter while $counter")
+        counter += 1
+    }//while
+    println(">2")
+    var counter1= 0
+    var roll = 0
+    do {
+        roll = Random.nextInt(6)
+        counter1 += 1
+        println("roll: $roll, counter1: $counter1")
+    } while (roll != 5)
 
 }//main
+
+private fun miniExercisesChapter4() {
+    println(">>>Mini exercises chapter 4")
+    println(">1")
+    val myAge = 32
+    val isTeenager = myAge in 13..19
+    println("isTeenager $isTeenager")
+    println(">2")
+    val theirAge = 30
+    val bothTeenagers = (theirAge in 13..19) && isTeenager
+    println("bothTeenagers $bothTeenagers")
+    println(">3")
+    val reader = "Edgar Adrian"
+    val author = "Edgar Adrian"
+    val authorIsReader = reader == author
+    println("authorIsReader $authorIsReader")
+}
+
+private fun ChallengesChapter3() {
+    println(">>>Challenges Chapter 3")
+    println(">1")
+    val coordenadas = 2 to 3
+    println(">2")
+    val (row, column) = coordenadas
+    println("row: $row")
+    println("column: $column")
+    println(">10")
+    println("kotlin.math.PI: " + PI)
+    println("kotlin.math.PI.toFloat(): " + PI.toFloat())
+}
 
 private fun pairAndTriples() {
     println(">>>Pair and Triples")
