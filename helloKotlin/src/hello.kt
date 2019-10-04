@@ -29,10 +29,267 @@ fun main(args: Array<String>) {
 
     miniExercisesChapter4()
 
+    basicControlFlow()
+
+    advanceControlFlow()
+
+    miniExercisesChapter5()
+
+    whenExpressions()
+
+    Functions()
+
+    nullability()
+
+
+}//main
+
+private fun nullability() {
+    println(">>>Nullability")
+    var authorName: String? = "Federico Gamboa"
+    var authorAge: Int? = 32
+
+    val ageAfterBirthday = authorAge!! + 1
+    println("After their next birthday, author will be $ageAfterBirthday")
+
+    var nonNullableAuthor: String
+    val nullableAuthor: String?
+
+    if (authorName != null) {
+        nonNullableAuthor = authorName
+    } else {
+        nullableAuthor = authorName
+    }
+
+    println(">>Mini Exercises")
+    var myFavoriteSong: String?
+    myFavoriteSong = "Lemon"
+
+    println("my favorite song is: $myFavoriteSong")
+
+    if (myFavoriteSong != null) {
+        println("myFavoriteSong is not null!")
+    } else {
+        println("myFavoriteSong is null")
+    }
+
+    println(">Safe calls")
+    var nameLength = authorName?.length
+    println("Author's name has length $nameLength")
+    var nameLengthPlus5 = authorName?.length?.plus(5)
+    println("Author's name length plus 5 is $nameLengthPlus5")
+
+    println(">Let")
+    authorName?.let {
+        println("authorName length let function: ${authorName.length}")
+    }
+
+    println(">Elvis Operator")
+    var nullableInt: Int? = 10
+    var mustHaveResult = nullableInt ?: 0
+    println("mustHaveResult: $mustHaveResult")
+
+    println(">>Challenges")
+    println(">1")
+    divideIfWhole(10, 2)
+    divideIfWhole(7, 2)
+    divideIfWhole(100, 10)
+}
+
+fun divideIfWhole(value: Int, divisor: Int): Int? {
+    if (value % divisor == 0) {
+        val result = value / divisor
+        println("Yep, it divides $result times")
+        return result
+    } else {
+        println("Not divisible :[")
+        return null
+    }
+}//divideIfWhole
+
+private fun Functions() {
+    println(">>>Functions")
+    printMyName()
+    printMultipleOfFive(10)
+    printMultipleOf(4, 2)
+    multiply(5, 5)
+
+    val (product, quotient) = multiplyAndDivide(5, 2)
+    println("The product $product")
+    println("The quotient $quotient")
+
+    fun multiplyInferred(number: Int, multiplier: Int): Int = number * multiplier
+    println("multiplyInferred ${multiplyInferred(5, 5)}")
+
+    println(">>MiniExercises")
+    println(">1")
+    printFullName("Edgar", "Adrián")
+    println(">2")
+    val (firstNameLength, lastNameLength) = calculateFullName("Edgar", "Adrián")
+    println("first name length $firstNameLength")
+    println("second name length $lastNameLength")
+
+    println(">>Functions as variables")
+    var function = ::add
+    var returnFunction = function(4, 5)
+    println("return Function: $returnFunction")
+}
+
+fun add(a: Int, b: Int): Int {
+    return a + b
+}//add
+
+fun calculateFullName(firstName: String, lastName: String): Pair<Int, Int> {
+    return Pair(firstName.length, lastName.length)
+}
+
+fun printFullName(firstName: String, lastName: String) {
+    println(firstName + " " + lastName)
+}//printFull
+
+fun multiplyAndDivide(number: Int, factor: Int): Pair<Int, Int> {
+    return Pair(number * factor, number / factor)
+}//multiplyAndDivide
+
+fun multiply(number: Int, multiplier: Int): Int {
+    return number * multiplier
+}//multiply
+
+fun printMultipleOf(multiplier: Int, andValue: Int) {
+    println("$multiplier * $andValue = ${multiplier * andValue}")
+}//printMultipleOf
+
+fun printMultipleOfFive(value: Int) {
+    println("$value * 5 = ${value * 5}")
+}//printMultipleOfFive
+
+fun printMyName(){
+    println("My name is Edgar Adrián")
+}//printMyName
+
+private fun whenExpressions() {
+    println(">>>When expressions")
+    val number = 10
+    when (number) {
+        0 -> println("It's zero")
+        else -> println("Non-zero")
+    }//when
+    when (number) {
+        10 -> println("It's ten!")
+    }
+    val string = "Dog"
+    when (string) {
+        "Cat", "Dog" -> println("Animal is a house pet")
+        else -> println("Animal is not a house pet")
+    }//when Dog
+    println(">>Returning values...")
+    val numberName = when (number) {
+        2 -> "two"
+        4 -> "four"
+        6 -> "six"
+        8 -> "eight"
+        10 -> "ten"
+        else -> {
+            println("Unknown number")
+            "Unknown"
+        }
+    }//numberName
+    println(numberName)
+    val hourOfDay = 12
+    val timeOfDay: String
+
+    timeOfDay = when (hourOfDay) {
+        in 0..5 -> "Early Morning"
+        in 6..11 -> "Morning"
+        in 12..16 -> "Afternoon"
+        in 17..19 -> "Evening"
+        in 20..23 -> "Late evening"
+        else -> "INVALID HOUR!"
+    }//timeOfDay
+    println(timeOfDay)
+    println(">Other example")
+    when {
+        number % 2 == 0 -> println("Even")
+        else -> println("Odd")
+    }//when
+    println(">>Mini Exercises When Expression")
+    println(">1")
+    val myAge = 32
+    when (myAge) {
+        in 0..2 -> println("Infant")
+        in 3..12 -> println("Child")
+        in 13..19 -> println("Teenager")
+        in 20..39 -> println("Adult")
+        in 40..60 -> println("Middle aged")
+        else -> println("Elderly")
+    }//when my Age
+    println(">2")
+    val myPair = Pair("Edgar Adrian", 32)
+    val (name, age) = myPair
+    when (age) {
+        in 0..2 -> println("${name} is an Infant")
+        in 3..12 -> println("${name} is a Child")
+        in 13..19 -> println("${name} is a Teenager")
+        in 20..39 -> println("${name} is an Adult")
+        in 40..60 -> println("${name} is a Middle aged")
+        else -> println("${name} is an Elderly")
+    }
+}
+
+private fun miniExercisesChapter5() {
+    println(">>Mini Exercises")
+    println(">1")
+    val range = 1..10
+    for (i in range) {
+        println("The square is ${i * i}")
+    }//for range
+    println(">2")
+    for (i in range) {
+        println("The square root is ${sqrt(i.toDouble())}")
+    }
+}
+
+private fun advanceControlFlow() {
+    println(">>>Advanced Control Flow")
+    println(">While")
+    val count = 10
+    var sum = 0
+
+    for (i in 1..count) {
+        sum += i
+        println("the sum here is: $sum")
+    }//for
+
+    println(">Repeat")
+    sum = 1
+    var lastSum = 0
+    repeat(10) {
+        val temp = sum
+        sum += lastSum
+        lastSum = temp
+        println("The lastSum is now: $lastSum")
+    }//repeat
+
+    println(">Step")
+    sum = 0
+    for (i in 1..count step 2) {
+        sum += i
+        println("The sum: $sum")
+    }//for step
+
+    println(">DownTo")
+    sum = 0
+    for (i in count downTo 1 step 2) {
+        sum += i
+        println("The sum downTo is: $sum")
+    }//for
+}
+
+private fun basicControlFlow() {
     println(">>>IF Expression")
     val animal = "Fox"
 
-    if (animal == "Cat" || animal == "Dog" ) {
+    if (animal == "Cat" || animal == "Dog") {
         println("Animal is a house pet")
     } else {
         println("Animal is not a house pet")
@@ -52,15 +309,14 @@ fun main(args: Array<String>) {
         counter += 1
     }//while
     println(">2")
-    var counter1= 0
+    var counter1 = 0
     var roll = 0
     do {
         roll = Random.nextInt(6)
         counter1 += 1
         println("roll: $roll, counter1: $counter1")
     } while (roll != 5)
-
-}//main
+}
 
 private fun miniExercisesChapter4() {
     println(">>>Mini exercises chapter 4")
