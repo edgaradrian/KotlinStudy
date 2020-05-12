@@ -35,7 +35,7 @@ private fun auraColor(isBlessed: Boolean, healthPoints: Int, isImmortal: Boolean
     return auraColor
 }//auraColor
 
-private fun castFireball(numFireballs: Int) {
+private fun castFireball(numFireballs: Int = 2) {
     println("A glass of Fireball springs into existence. (x$numFireballs)")
 }//castFireball
 
