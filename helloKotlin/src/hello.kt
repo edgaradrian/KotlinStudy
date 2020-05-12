@@ -41,6 +41,97 @@ fun main(args: Array<String>) {
 
     nullability()
 
+    println(">>>Arrays")
+    val evenNumbers = arrayOf(0,2,4,6,8,10)
+    println(">evenNumbers")
+    evenNumbers.forEach {
+        println("$it")
+    }
+
+    println(">fiveFives")
+    val fiveFives = Array(5, {5}) // 5,5,5,5,5
+    for (five in fiveFives) {
+        println("$five")
+    }//fiveFives
+
+    println(">vowels")
+    val vowels = arrayOf('a','b','c','d','e')
+    vowels.forEach {
+        println(it)
+    }
+
+    val oddNumbers = intArrayOf(1,3,5,7)
+
+    val zeros = DoubleArray(4) // 0.0, 0.0, 0.0, 0.0, 0.0
+
+    val otherOddNumbers = arrayOf(1,3,5,7,9).toIntArray()
+
+    println(">>>Lists")
+    val innerPlanets = listOf("Mercury", "Venus", "Earth", "Mars")
+    println(">innerPlanets")
+    innerPlanets.forEach {
+        println(it)
+    }//innerPlanets
+
+    val innerPlanetsArrayList = arrayListOf("Mercury", "Venus", "Earth", "Mars")
+    println(">innerPlanetsArrayList")
+    innerPlanetsArrayList.forEach {
+        println(it)
+    }//innerPlanetsArrayList
+
+    println(">>>Mutable List")
+    val outerPlanets = mutableListOf("Jupiter", "Saturn", "Uranus", "Neptune")
+
+    val players = mutableListOf("Edgar", "Dulce", "Miranda", "Gael")
+
+    if (players.size < 2) {
+        println("We need at least two players")
+    } else {
+        println("let's start!")
+    }//else
+
+    var currentPlayer = players.first()
+    println("currentPlayer: $currentPlayer")
+    println("lastPlayer: ${players.last()}")
+
+    val minPlayer = players.min()
+    minPlayer.let {
+        println("$minPlayer will start")
+    }
+
+    val maxPlayer = players.max()
+    if (maxPlayer != null) {
+        println("$maxPlayer is the MAX")
+    }
+
+    val firstPlayer = players[0]
+    println("First Player is $firstPlayer")
+
+    val secondPlayer = players.get(1)
+    println("Second Player is $secondPlayer")
+
+    val upcomingPlayersSlice = players.slice(1..2)
+    println("upcomingPlayersSlice: ${upcomingPlayersSlice.joinToString()}")
+
+    players.add("Batman")
+    players += "Robin"
+
+    println("players joined: ${players.joinToString()}")
+
+    players.add(5, "Catwoman")
+
+    println("players joined + Catwoman ${players.joinToString()}")
+
+    val wasPlayerRemoved = players.remove("Robin")
+    println("It is $wasPlayerRemoved that Robin was removed")
+
+    val removedPlayer = players.removeAt(2)
+    println("$removedPlayer was removed")
+
+    val indexOfBatman = players.indexOf("Batman")
+    println("Batman is the $indexOfBatman element")
+
+    println("current players joined: ${players.joinToString {  }}")
 
 }//main
 
