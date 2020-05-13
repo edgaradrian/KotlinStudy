@@ -40,4 +40,14 @@ fun main(args: Array<String>) {
 
     println(multipleGreetingFunction("Edgar Adrian", 3))
 
+    println(">")
+    println(">")
+    println("<<<Type Inference Support>>>")
+    val typeInferenceGreetingFunction = { playerName:String, numBuildings:Int ->
+        val currentYear = 2020
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }//typeInferenceGreetingFunction
+    println(typeInferenceGreetingFunction("Guyal",2))
+
 }//main
