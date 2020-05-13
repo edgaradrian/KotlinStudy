@@ -50,4 +50,14 @@ fun main(args: Array<String>) {
     }//typeInferenceGreetingFunction
     println(typeInferenceGreetingFunction("Guyal",2))
 
+    println(">")
+    println(">")
+    println("<<<Defining a Function That Accepts a Function>>>")
+    runSimulation("Guyal", typeInferenceGreetingFunction)
+
 }//main
+
+fun runSimulation(playerName: String, greetingFunction: (String,Int) -> String) {
+    val numBuildings = (1..3).shuffled().last()
+    println(greetingFunction(playerName,numBuildings))
+}//runSimulation
