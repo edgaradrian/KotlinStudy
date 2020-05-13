@@ -55,6 +55,15 @@ fun main(args: Array<String>) {
     println("<<<Defining a Function That Accepts a Function>>>")
     runSimulation("Guyal", typeInferenceGreetingFunction)
 
+    println(">")
+    println(">")
+    println("<<<Shorthand syntax>>>")
+    runSimulation("Guyal") { playerName, numBuildings ->
+        val currentYear = 2020
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName (copyright $currentYear)"
+    }
+
 }//main
 
 fun runSimulation(playerName: String, greetingFunction: (String,Int) -> String) {
