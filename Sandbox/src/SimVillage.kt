@@ -1,5 +1,11 @@
 fun main(args: Array<String>) {
 
+    val numLetters = "Mississippi".count()
+    println(numLetters)
+
+    val numLettersS = "Mississippi".count { it == 's' }
+    println("$numLettersS times in Mississippi")
+
     println({
         val currentYear = 2019
         "Welcome to SimVillage, Mayor (copyright $currentYear)"
