@@ -64,9 +64,18 @@ fun main(args: Array<String>) {
         "Welcome to SimVillage, $playerName (copyright $currentYear)"
     }
 
+    println(">")
+    println(">")
+    println("<<<Function References>>>")
+
 }//main
 
 inline fun runSimulation(playerName: String, greetingFunction: (String,Int) -> String) {
     val numBuildings = (1..3).shuffled().last()
     println(greetingFunction(playerName,numBuildings))
 }//runSimulation
+
+fun printConstructionCost(numBuildings: Int) {
+    val cost = 500
+    println("construction cost: ${cost * numBuildings}")
+}
