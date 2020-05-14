@@ -52,44 +52,63 @@ fun main(args: Array<String>) {
     }//typeInferenceGreetingFunction
     println(typeInferenceGreetingFunction("Guyal",2))
 
-    println(">")
-    println(">")
-    println("<<<Defining a Function That Accepts a Function>>>")
+/*    println("<<<Defining a Function That Accepts a Function>>>")
     runSimulation("Guyal", ::printConstructionCost) { playerName, numBuildings ->
         val currentYear = 2020
         println("Adding $numBuildings houses")
         "Welcome to SimVillage, $playerName! (copyright $currentYear)"
     }
+*/
 
-    println(">")
-    println(">")
-    println("<<<Shorthand syntax>>>")
     /*runSimulation("Guyal") { playerName, numBuildings ->
         val currentYear = 2020
         println("Adding $numBuildings houses")
         "Welcome to SimVillage, $playerName (copyright $currentYear)"
     }*/
 
-    println(">")
-    println(">")
-    println("<<<Function References>>>")
+    /*
     runSimulation("Guyal", ::printConstructionCost) { playerName, numBuildings ->
         val currentYear = 2020
         println("Adding $numBuildings houses")
         "Welcome to SimVillage, $playerName! (copyright $currentYear)"
-    }
+    }*/
+
+    spaceAnd("Function Type as Return Type")
+    runSimulation()
 
 }//main
 
-inline fun runSimulation(playerName: String,
+/*inline fun runSimulation(playerName: String,
                          costPrinter: (Int) -> Unit,
                          greetingFunction: (String,Int) -> String) {
     val numBuildings = (1..3).shuffled().last()
     costPrinter(numBuildings)
     println(greetingFunction(playerName,numBuildings))
 }//runSimulation
+*/
+fun runSimulation() {
+    val greetingFunction = configureGreetingFunction()
+    println(greetingFunction("Guyal"))
+}//runSimulation
+
+fun configureGreetingFunction(): (String) -> String {
+    val structureType = "hospitals"
+    var numBuildings = 5
+    return { playerName: String ->
+        val currentYear = 2018
+        numBuildings += 1
+        println("Adding $numBuildings $structureType")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
+}//configureGreetingsFunction
 
 fun printConstructionCost(numBuildings: Int) {
     val cost = 500
     println("construction cost: ${cost * numBuildings}")
 }
+
+fun spaceAnd(title: String): Unit {
+    println(">")
+    println(">")
+    println(">>>$title<<<")
+}//spaceAnd
