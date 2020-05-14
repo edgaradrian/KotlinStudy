@@ -1,3 +1,5 @@
+import kotlin.test.currentStackTrace
+
 fun main(args: Array<String>) {
 
     val numLetters = "Mississippi".count()
@@ -53,25 +55,37 @@ fun main(args: Array<String>) {
     println(">")
     println(">")
     println("<<<Defining a Function That Accepts a Function>>>")
-    runSimulation("Guyal", typeInferenceGreetingFunction)
-
-    println(">")
-    println(">")
-    println("<<<Shorthand syntax>>>")
-    runSimulation("Guyal") { playerName, numBuildings ->
+    runSimulation("Guyal", ::printConstructionCost) { playerName, numBuildings ->
         val currentYear = 2020
         println("Adding $numBuildings houses")
-        "Welcome to SimVillage, $playerName (copyright $currentYear)"
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
     }
 
     println(">")
     println(">")
+    println("<<<Shorthand syntax>>>")
+    /*runSimulation("Guyal") { playerName, numBuildings ->
+        val currentYear = 2020
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName (copyright $currentYear)"
+    }*/
+
+    println(">")
+    println(">")
     println("<<<Function References>>>")
+    runSimulation("Guyal", ::printConstructionCost) { playerName, numBuildings ->
+        val currentYear = 2020
+        println("Adding $numBuildings houses")
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
+    }
 
 }//main
 
-inline fun runSimulation(playerName: String, greetingFunction: (String,Int) -> String) {
+inline fun runSimulation(playerName: String,
+                         costPrinter: (Int) -> Unit,
+                         greetingFunction: (String,Int) -> String) {
     val numBuildings = (1..3).shuffled().last()
+    costPrinter(numBuildings)
     println(greetingFunction(playerName,numBuildings))
 }//runSimulation
 
