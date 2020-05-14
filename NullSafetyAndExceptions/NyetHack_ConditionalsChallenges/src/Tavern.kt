@@ -9,7 +9,15 @@ fun main(args: Array<String>) {
             "Chela"
         }
     }*/
-    var beverage = readLine()!!.capitalize()
+    //var beverage = readLine()!!.capitalize()
+    var beverage = readLine()
+
+    if (!beverage.isNullOrBlank()) {
+        beverage = beverage.capitalize()
+    } else {
+        println("I can't do that without crashing - beverage was null")
+    }
+
 //    beverage = null
     println(beverage)
 }//main
