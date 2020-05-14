@@ -16,8 +16,11 @@ fun main(args: Array<String>) {
         beverage = beverage.capitalize()
     } else {
         println("I can't do that without crashing - beverage was null")
+        beverage = null
     }
 
 //    beverage = null
-    println(beverage)
+//    println(beverage)
+    val beverageServed:String = beverage ?: "Chela"
+    println(beverageServed)
 }//main
