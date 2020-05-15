@@ -14,13 +14,14 @@ fun main(args: Array<String>) {
     } catch (e: Exception) {
         println(e)
     }
-    
+
     println("You juggle $swordJuggling sword!")
 }//main
 
 fun proficiencyCheck(swordsJuggling: Int?) {
     //swordsJuggling ?: throw IllegalStateException("Player cannot juggle swords")
-    swordsJuggling ?: throw UnskilledSwordJugglerException()
+    //swordsJuggling ?: throw UnskilledSwordJugglerException()
+    checkNotNull(swordsJuggling, { "Player cannot juggle swords" })
 }//proficiencyCheck
 
 class UnskilledSwordJugglerException() : IllegalStateException("Player cannot juggle swords")
