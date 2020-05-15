@@ -5,5 +5,7 @@ fun main(args: Array<String>) {
         swordJuggling = 2
     }
 
+    swordJuggling = swordJuggling!!.plus(1)
+
     println("You juggle $swordJuggling sword!")
 }//main
