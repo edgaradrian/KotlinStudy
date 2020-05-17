@@ -39,7 +39,7 @@ private fun placeOrder(menuData: String) {
     val message = "Dulce buys a $name ($type) for $price."
     println(message)
 
-    performPurchase(price)
+    performPurchase(price.toDouble())
     /*
     val phrase = "Ah, delicious $name!"
     println("Dulce exclaims: ${toDragonSpeak(phrase)}")
