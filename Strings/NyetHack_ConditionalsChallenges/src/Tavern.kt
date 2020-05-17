@@ -2,6 +2,11 @@ const val TAVERN_NAME = "Lobohombo's Folly"
 
 fun main(args: Array<String>) {
     placeOrder("shandy,Dragon's Breath,5.91")
+
+    TAVERN_NAME.forEach {
+        println("$it")
+    }
+
 }//main
 
 private fun toDragonSpeak(phrase: String) = phrase.replace(Regex("[aeiou]")) {
