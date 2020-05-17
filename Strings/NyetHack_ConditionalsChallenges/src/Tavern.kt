@@ -9,13 +9,13 @@ fun main(args: Array<String>) {
 
 }//main
 
-private fun toDragonSpeak(phrase: String) = phrase.replace(Regex("[aeiou]")) {
+private fun toDragonSpeak(phrase: String) = phrase.replace(Regex("[aeiouAEIOU]")) {
     when (it.value) {
-        "a" -> "4"
-        "e" -> "3"
-        "i" -> "1"
-        "o" -> "0"
-        "u" -> "|_|"
+        "a","A" -> "4"
+        "e","E" -> "3"
+        "i","I" -> "1"
+        "o","O" -> "0"
+        "u","U" -> "|_|"
         else -> it.value
     }
 }//toDragonSpeak
@@ -44,5 +44,8 @@ private fun placeOrder(menuData: String) {
         "Dulce says: Thanks for the $name."
     }//phrase
     println(phrase)
+
+    //Challenge: Improving DragonSpeak
+    println("${toDragonSpeak(message.toUpperCase())}")
 
 }//place order
