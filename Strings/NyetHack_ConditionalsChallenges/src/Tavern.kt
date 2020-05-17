@@ -13,7 +13,7 @@ private fun toDragonSpeak(phrase: String) = phrase.replace(Regex("[aeiou]")) {
         "u" -> "|_|"
         else -> it.value
     }
-}
+}//toDragonSpeak
 
 private fun placeOrder(menuData: String) {
     val indexOfApostrophe = TAVERN_NAME.indexOf("\'")
@@ -28,6 +28,16 @@ private fun placeOrder(menuData: String) {
     val message = "Dulce buys a $name ($type) for $price."
     println(message)
 
+    /*
     val phrase = "Ah, delicious $name!"
     println("Dulce exclaims: ${toDragonSpeak(phrase)}")
+    */
+
+    val phrase = if (name == "Dragon's Breath") {
+        "Dulce exclaims ${toDragonSpeak("Ah, delicious $name")}"
+    } else {
+        "Dulce says: Thanks for the $name."
+    }//phrase
+    println(phrase)
+
 }//place order
