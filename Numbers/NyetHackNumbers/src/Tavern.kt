@@ -3,7 +3,12 @@ const val TAVERN_NAME = "Lobohombo's Folly"
 var playerGold = 10
 var playerSilver = 10
 
+//Challenge: Remaining Pints
+var cask = 5
+var pint = .125
+
 fun main(args: Array<String>) {
+    placeOrder("shandy,Dragon's Breath,5.91")
     placeOrder("shandy,Dragon's Breath,5.91")
 }//main
 
@@ -14,13 +19,23 @@ fun performPurchase(price: Double) {
     println("Purchasing item for $price")
 
     val remainingBalance = totalPurse - price
-    println("Remaining balance:  ${"%.2f".format(remainingBalance)}")
 
-    val remainingGold = remainingBalance.toInt()
-    val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
-    playerGold = remainingGold
-    playerSilver = remainingSilver
-    displayBalance()
+    if (remainingBalance >= 0) {
+        println("Remaining balance:  ${"%.2f".format(remainingBalance)}")
+
+        val remainingGold = remainingBalance.toInt()
+        val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
+        playerGold = remainingGold
+        playerSilver = remainingSilver
+        displayBalance()
+
+        //Remaining pints
+        val remainingGallons = cask - pint
+        println("Remaning gallons: ${"%.3f".format(remainingGallons)}")
+    } else {
+        println("Not enough money")
+    }
+
 }//performPurchase
 
 private fun displayBalance() {
