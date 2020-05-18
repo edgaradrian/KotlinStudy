@@ -13,6 +13,7 @@ fun performPurchase(price: Double) {
     println("Purchasing item for $price")
 
     val remainingBalance = totalPurse - price
+    println("Remaining balance:  ${"%.2f".format(remainingBalance)}")
 }//performPurchase
 
 private fun displayBalance() {
