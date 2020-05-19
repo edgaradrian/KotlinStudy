@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
         println("The tavern master says: Nay, they departed hours ago")
     }
 
-    placeOrder("shandy,Dragon's Breath,5.91")
+    //placeOrder("shandy,Dragon's Breath,5.91")
 
     println(patronList)
     println(patronList[0])
@@ -46,6 +46,7 @@ fun main(args: Array<String>) {
 
     patronMutableList.forEachIndexed { index, patron ->
         println("Good evening $patron - you're #${index + 1} in line")
+        placeOrder(patron, "shandy,Dragon's Breath,5.91")
     }
 
     //Accesing a nonexistent index
@@ -98,29 +99,33 @@ private fun toDragonSpeak(phrase: String) = phrase.replace(Regex("[aeiouAEIOU]")
     }
 }//toDragonSpeak
 
-private fun placeOrder(menuData: String) {
+private fun placeOrder(patronName: String, menuData: String) {
     val indexOfApostrophe = TAVERN_NAME.indexOf("\'")
     val tavernMaster = TAVERN_NAME.substring(0 until indexOfApostrophe)
-    println("Dulce speaks with $tavernMaster about their order.")
+    //println("Dulce speaks with $tavernMaster about their order.")
+    println("$patronName speaks with $tavernMaster about their order")
 
     /*val data = menuData.split(',')
     val type = data[0]
     val name = data[1]
     val price = data[2]*/
     val (type, name, price) = menuData.split(',')
-    val message = "Dulce buys a $name ($type) for $price."
+    //val message = "Dulce buys a $name ($type) for $price."
+    val message = "$patronName buys a $name ($type) for $price."
     println(message)
 
-    performPurchase(price.toDouble())
+    //performPurchase(price.toDouble())
     /*
     val phrase = "Ah, delicious $name!"
     println("Dulce exclaims: ${toDragonSpeak(phrase)}")
     */
 
     val phrase = if (name == "Dragon's Breath") {
-        "Dulce exclaims ${toDragonSpeak("Ah, delicious $name")}"
+        //"Dulce exclaims ${toDragonSpeak("Ah, delicious $name")}"
+        "$patronName exclaims: ${toDragonSpeak("Ah, delicious $name!")}"
     } else {
-        "Dulce says: Thanks for the $name."
+        //"Dulce says: Thanks for the $name."
+        "$patronName says: Thanks for the $name"
     }//phrase
     println(phrase)
 
