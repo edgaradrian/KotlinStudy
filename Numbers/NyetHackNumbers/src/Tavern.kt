@@ -1,9 +1,13 @@
 import kotlin.math.roundToInt
+import java.io.File
 const val TAVERN_NAME = "Lobohombo's Folly"
 var playerGold = 10
 var playerSilver = 10
 val patronList = listOf("Edgar", "Adrian", "Dulce")
 val patronMutableList = mutableListOf("Edgar", "Adrian", "Dulce")
+val menuList = File("data/tavern-menu-items.txt")
+    .readText()
+    .split("\n")
 
 //Challenge: Remaining Pints
 var cask = 5
