@@ -3,6 +3,7 @@ const val TAVERN_NAME = "Lobohombo's Folly"
 var playerGold = 10
 var playerSilver = 10
 val patronList = listOf("Edgar", "Adrian", "Dulce")
+val patronMutableList = mutableListOf("Edgar", "Adrian", "Dulce")
 
 //Challenge: Remaining Pints
 var cask = 5
@@ -26,6 +27,12 @@ fun main(args: Array<String>) {
 
     println(patronList)
     println(patronList[0])
+
+    //MutableList
+    println(patronMutableList)
+    patronMutableList.remove("Edgar")
+    patronMutableList.add("Addick")
+    println(patronMutableList)
 
     //Accesing a nonexistent index
     val nonexistentIndex = patronList.getOrElse(4) { "Unknown patron" }
