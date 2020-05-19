@@ -2,7 +2,7 @@ import kotlin.math.roundToInt
 const val TAVERN_NAME = "Lobohombo's Folly"
 var playerGold = 10
 var playerSilver = 10
-val patronList: List<String> = listOf("Edgar", "Adrian", "Dulce")
+val patronList = listOf("Edgar", "Adrian", "Dulce")
 
 //Challenge: Remaining Pints
 var cask = 5
@@ -12,7 +12,8 @@ fun main(args: Array<String>) {
     placeOrder("shandy,Dragon's Breath,5.91")
     placeOrder("shandy,Dragon's Breath,5.91")
 
-    print(patronList)
+    println(patronList)
+    println(patronList[0])
 }//main
 
 fun performPurchase(price: Double) {
