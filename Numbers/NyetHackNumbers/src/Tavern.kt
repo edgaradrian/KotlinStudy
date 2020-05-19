@@ -9,7 +9,13 @@ var cask = 5
 var pint = .125
 
 fun main(args: Array<String>) {
-    placeOrder("shandy,Dragon's Breath,5.91")
+
+    if (patronList.contains("Edgar")) {
+        println("The tavern master says: Edgar's in the back playing cards")
+    } else {
+        println("The tavern master says: Edgar isn't here")
+    }
+
     placeOrder("shandy,Dragon's Breath,5.91")
 
     println(patronList)
