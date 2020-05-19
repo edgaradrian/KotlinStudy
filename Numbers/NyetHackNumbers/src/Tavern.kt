@@ -4,6 +4,7 @@ const val TAVERN_NAME = "Lobohombo's Folly"
 var playerGold = 10
 var playerSilver = 10
 val patronList = listOf("Edgar", "Adrian", "Dulce")
+val lastName = listOf("Ruiz", "Miranda", "Skywalker")
 val patronMutableList = mutableListOf("Edgar", "Adrian", "Dulce")
 val menuList = File("data/tavern-menu-data.txt")
     .readText()
@@ -56,6 +57,13 @@ fun main(args: Array<String>) {
 
     menuList.forEachIndexed { index, data ->
         println("$index : $data")
+    }
+
+    (0..9).forEach {
+        val first = patronMutableList.shuffled().first()
+        var last = lastName.shuffled().first()
+        val name = "$first $last"
+        println(name)
     }
 
     //Accesing a nonexistent index
