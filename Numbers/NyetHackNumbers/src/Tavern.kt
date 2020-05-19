@@ -40,6 +40,10 @@ fun main(args: Array<String>) {
         println("Good evening $patron")
     }
 
+    patronMutableList.forEach { patron ->
+        println("Good evening $patron")
+    }//forEach
+
     //Accesing a nonexistent index
     val nonexistentIndex = patronList.getOrElse(4) { "Unknown patron" }
     println(nonexistentIndex)
