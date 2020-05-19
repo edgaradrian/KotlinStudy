@@ -14,6 +14,10 @@ fun main(args: Array<String>) {
 
     println(patronList)
     println(patronList[0])
+
+    //Accesing a nonexistent index
+    val nonexistentIndex = patronList.getOrElse(4) { "Unknown patron" }
+    println(nonexistentIndex)
 }//main
 
 fun performPurchase(price: Double) {
