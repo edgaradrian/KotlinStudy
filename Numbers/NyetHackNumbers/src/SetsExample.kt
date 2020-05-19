@@ -8,4 +8,7 @@ fun main(args: Array<String>) {
 
     val containsYavin = planets.contains("Yavin")
     println(containsYavin)
+
+    val thirdPlanet = planets.elementAt(2)
+    println(thirdPlanet)
 }//main
