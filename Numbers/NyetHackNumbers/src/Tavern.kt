@@ -5,7 +5,7 @@ var playerGold = 10
 var playerSilver = 10
 val patronList = listOf("Edgar", "Adrian", "Dulce")
 val patronMutableList = mutableListOf("Edgar", "Adrian", "Dulce")
-val menuList = File("data/tavern-menu-items.txt")
+val menuList = File("data/tavern-menu-data.txt")
     .readText()
     .split("\n")
 
@@ -51,6 +51,10 @@ fun main(args: Array<String>) {
     patronMutableList.forEachIndexed { index, patron ->
         println("Good evening $patron - you're #${index + 1} in line")
         placeOrder(patron, "shandy,Dragon's Breath,5.91")
+    }
+
+    menuList.forEachIndexed { index, data ->
+        println("$index : $data")
     }
 
     //Accesing a nonexistent index
