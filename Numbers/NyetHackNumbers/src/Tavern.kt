@@ -5,6 +5,7 @@ var playerGold = 10
 var playerSilver = 10
 val patronList = listOf("Edgar", "Adrian", "Dulce")
 val lastName = listOf("Ruiz", "Miranda", "Skywalker")
+val uniquePatrons = mutableSetOf<String>()
 val patronMutableList = mutableListOf("Edgar", "Adrian", "Dulce")
 val menuList = File("data/tavern-menu-data.txt")
     .readText()
@@ -63,7 +64,14 @@ fun main(args: Array<String>) {
         val first = patronMutableList.shuffled().first()
         var last = lastName.shuffled().first()
         val name = "$first $last"
-        println(name)
+        uniquePatrons += name
+    }
+    println(uniquePatrons)
+
+    var orderCount = 0
+    while (orderCount <= 9) {
+        placeOrder(uniquePatrons.shuffled().first(), menuList.shuffled().first())
+        orderCount++
     }
 
     //Accesing a nonexistent index
