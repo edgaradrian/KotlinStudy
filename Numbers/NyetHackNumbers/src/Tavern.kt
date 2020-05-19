@@ -36,6 +36,10 @@ fun main(args: Array<String>) {
     patronMutableList[0] = "Miranda"
     println(patronMutableList)
 
+    for (patron in patronMutableList) {
+        println("Good evening $patron")
+    }
+
     //Accesing a nonexistent index
     val nonexistentIndex = patronList.getOrElse(4) { "Unknown patron" }
     println(nonexistentIndex)
