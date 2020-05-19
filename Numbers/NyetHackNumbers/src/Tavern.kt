@@ -50,7 +50,8 @@ fun main(args: Array<String>) {
 
     patronMutableList.forEachIndexed { index, patron ->
         println("Good evening $patron - you're #${index + 1} in line")
-        placeOrder(patron, "shandy,Dragon's Breath,5.91")
+        //placeOrder(patron, "shandy,Dragon's Breath,5.91")
+        placeOrder(patron, menuList.shuffled().first())
     }
 
     menuList.forEachIndexed { index, data ->
