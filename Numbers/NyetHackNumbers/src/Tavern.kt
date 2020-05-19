@@ -32,6 +32,7 @@ fun main(args: Array<String>) {
     println(patronMutableList)
     patronMutableList.remove("Edgar")
     patronMutableList.add("Addick")
+    patronMutableList.add(0,"Addick")
     println(patronMutableList)
 
     //Accesing a nonexistent index
