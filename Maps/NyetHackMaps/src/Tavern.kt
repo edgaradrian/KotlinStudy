@@ -79,6 +79,9 @@ fun main(args: Array<String>) {
     }
 
     println(patronGold)
+    println(patronGold["Edgar"])
+    println(patronGold["Adrian"])
+    println(patronGold["Astrid"])
 
     //PairType Map
     println(patronPairGold)
