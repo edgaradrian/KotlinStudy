@@ -11,6 +11,7 @@ val menuList = File("data/tavern-menu-data.txt")
     .readText()
     .split("\n")
 val patronGold = mapOf("Edgar" to 10.5, "Adrian" to 8.0, "Astrid" to 5.5)
+val newPatronGold = mutableMapOf<String, Double>()
 
 val patronPairGold = mapOf(Pair("Edgar",10.84), Pair("Adrian",9.00), Pair("Dulce", 6.50))
 val patronMutableGold = mutableMapOf("Edgar" to 11.0, "Dulce" to 1.0 )
@@ -71,6 +72,10 @@ fun main(args: Array<String>) {
         uniquePatrons += name
     }
     println(uniquePatrons)
+
+    uniquePatrons.forEach {
+        newPatronGold[it] = 7.0
+    }
 
     var orderCount = 0
     while (orderCount <= 9) {
