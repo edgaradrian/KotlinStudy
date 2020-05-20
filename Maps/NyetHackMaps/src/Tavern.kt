@@ -12,6 +12,8 @@ val menuList = File("data/tavern-menu-data.txt")
     .split("\n")
 val patronGold = mapOf("Edgar" to 10.5, "Adrian" to 8.0, "Astrid" to 5.5)
 
+val patronPairGold = mapOf(Pair("Edgar",10.84), Pair("Adrian",9.00), Pair("Sophie", 6.50))
+
 //Challenge: Remaining Pints
 var cask = 5
 var pint = .125
@@ -76,6 +78,9 @@ fun main(args: Array<String>) {
     }
 
     println(patronGold)
+
+    //PairType Map
+    println(patronPairGold)
 
     //Accesing a nonexistent index
     val nonexistentIndex = patronList.getOrElse(4) { "Unknown patron" }
