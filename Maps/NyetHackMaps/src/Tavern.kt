@@ -12,7 +12,8 @@ val menuList = File("data/tavern-menu-data.txt")
     .split("\n")
 val patronGold = mapOf("Edgar" to 10.5, "Adrian" to 8.0, "Astrid" to 5.5)
 
-val patronPairGold = mapOf(Pair("Edgar",10.84), Pair("Adrian",9.00), Pair("Sophie", 6.50))
+val patronPairGold = mapOf(Pair("Edgar",10.84), Pair("Adrian",9.00), Pair("Dulce", 6.50))
+val patronMutableGold = mutableMapOf("Edgar" to 11.0, "Dulce" to 1.0 )
 
 //Challenge: Remaining Pints
 var cask = 5
@@ -81,6 +82,10 @@ fun main(args: Array<String>) {
 
     //PairType Map
     println(patronPairGold)
+
+    //Adding a duplicate key
+    patronMutableGold += "Dulce" to 11.33
+    println(patronMutableGold)
 
     //Accesing a nonexistent index
     val nonexistentIndex = patronList.getOrElse(4) { "Unknown patron" }
