@@ -10,7 +10,7 @@ val patronMutableList = mutableListOf("Edgar", "Adrian", "Dulce")
 val menuList = File("data/tavern-menu-data.txt")
     .readText()
     .split("\n")
-val patronGold = mapOf("Edgar" to 10.5, "Adrian" to 8.0, "Astrid" to 5.5)
+val patronGold = mapOf("Edgar" to 10.5, "Adrian" to 8.0, "Dulce" to 5.5)
 val newPatronGold = mutableMapOf<String, Double>()
 
 val patronPairGold = mapOf(Pair("Edgar",10.84), Pair("Adrian",9.00), Pair("Dulce", 6.50))
@@ -41,10 +41,10 @@ fun main(args: Array<String>) {
 
     //MutableList
     println(patronMutableList)
-    patronMutableList.remove("Edgar")
-    patronMutableList.add("Addick")
-    patronMutableList.add(0,"Addick")
-    patronMutableList[0] = "Miranda"
+    //patronMutableList.remove("Edgar")
+    //patronMutableList.add("Addick")
+    //patronMutableList.add(0,"Addick")
+    //patronMutableList[0] = "Miranda"
     println(patronMutableList)
 
     for (patron in patronMutableList) {
@@ -58,7 +58,7 @@ fun main(args: Array<String>) {
     patronMutableList.forEachIndexed { index, patron ->
         println("Good evening $patron - you're #${index + 1} in line")
         //placeOrder(patron, "shandy,Dragon's Breath,5.91")
-        placeOrder(patron, menuList.shuffled().first())
+        //placeOrder(patron, menuList.shuffled().first())
     }
 
     menuList.forEachIndexed { index, data ->
@@ -79,7 +79,7 @@ fun main(args: Array<String>) {
 
     var orderCount = 0
     while (orderCount <= 9) {
-        placeOrder(uniquePatrons.shuffled().first(), menuList.shuffled().first())
+//        placeOrder(uniquePatrons.shuffled().first(), menuList.shuffled().first())
         orderCount++
     }
 
@@ -104,7 +104,7 @@ fun main(args: Array<String>) {
     println(fifthPatron)
 }//main
 
-fun performPurchase(price: Double) {
+/*fun performPurchase(price: Double) {
     displayBalance()
     val totalPurse = playerGold + (playerSilver / 100.0)
     println("Total purse: $totalPurse")
@@ -128,6 +128,12 @@ fun performPurchase(price: Double) {
         println("Not enough money")
     }
 
+}//performPurchase
+*/
+
+fun performPurchase(price: Double, patronName: String) {
+    val totalPurse = patronMutableGold.getValue(patronName)
+    patronMutableGold[patronName] = totalPurse - price
 }//performPurchase
 
 private fun displayBalance() {
@@ -160,7 +166,7 @@ private fun placeOrder(patronName: String, menuData: String) {
     val message = "$patronName buys a $name ($type) for $price."
     println(message)
 
-    //performPurchase(price.toDouble())
+    performPurchase(price.toDouble(), patronName)
     /*
     val phrase = "Ah, delicious $name!"
     println("Dulce exclaims: ${toDragonSpeak(phrase)}")
