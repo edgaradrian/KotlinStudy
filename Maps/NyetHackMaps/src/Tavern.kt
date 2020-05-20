@@ -102,7 +102,16 @@ fun main(args: Array<String>) {
     //Testing getOrNull
     val fifthPatron = patronList.getOrNull(4) ?: "Unknown patron"
     println(fifthPatron)
+
+    displayPatronBalance()
+
 }//main
+
+private fun displayPatronBalance() {
+    patronMutableGold.forEach { patron, balance ->
+        println("$patron, balance: ${"%.2f".format(balance)}")
+    }
+}
 
 /*fun performPurchase(price: Double) {
     displayBalance()
