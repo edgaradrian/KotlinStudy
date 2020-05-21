@@ -1,14 +1,11 @@
 fun main(args: Array<String>) {
 
-
-    val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
-
     val player = Player()
     player.castFireball()
 
-    val healthStatus = formatHealthStatus(healthPoints, isBlessed)
+    val auraColor = player.auraColor()
 
-    printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
+    printPlayerStatus(player)
 
     //Computed properties
     val d6 = Dice()
@@ -19,16 +16,13 @@ fun main(args: Array<String>) {
 }//main
 
 private fun printPlayerStatus(
-    auraColor: String,
-    isBlessed: Boolean,
-    name: String,
-    healthStatus: String
+    player: Player
 ) {
     println(
-        "(Aura: $auraColor)" +
-                "(Blessed: ${if (isBlessed) "YES" else "NO"})"
+        "(Aura: ${player.auraColor()})" +
+                "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"
     )
-    println("$name $healthStatus")
+    println("${player.name} ${player.formatHealthStatus()}")
 }//printPlayerStatus
 
 
