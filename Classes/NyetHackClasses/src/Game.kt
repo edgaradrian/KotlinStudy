@@ -12,6 +12,12 @@ fun main(args: Array<String>) {
 
     printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
 
+    //Computed properties
+    val d6 = Dice()
+    println(d6.rolledValue)
+    println(d6.rolledValue)
+    println(d6.rolledValue)
+
 }//main
 
 private fun printPlayerStatus(
