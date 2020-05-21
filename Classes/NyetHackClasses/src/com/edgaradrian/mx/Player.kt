@@ -1,3 +1,5 @@
+package com.edgaradrian.mx
+
 class Player {
     var name = "edgar"
         get() = field.capitalize()
@@ -28,4 +30,4 @@ class Player {
     }
 
     fun castFireball(numFireballs: Int = 2) = println("A glass of Fireball springs into existence. (x$numFireballs)")
-}//Player
+}//com.edgaradrian.mx.Player

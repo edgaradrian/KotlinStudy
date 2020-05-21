@@ -1,4 +1,6 @@
+package com.edgaradrian.mx
+
 class Dice {
     val rolledValue
     get() = (1..6).shuffled().first()
-}//Dice
+}//com.edgaradrian.mx.Dice

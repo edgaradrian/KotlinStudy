@@ -1,3 +1,5 @@
+package com.edgaradrian.mx
+
 fun main(args: Array<String>) {
 
     val player = Player()
@@ -13,7 +15,7 @@ fun main(args: Array<String>) {
     println(d6.rolledValue)
     println(d6.rolledValue)
 
-}//main
+}//com.edgaradrian.mx.main
 
 private fun printPlayerStatus(
     player: Player
@@ -23,7 +25,7 @@ private fun printPlayerStatus(
                 "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"
     )
     println("${player.name} ${player.formatHealthStatus()}")
-}//printPlayerStatus
+}//com.edgaradrian.mx.printPlayerStatus
 
 
 
