@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
     val auraVisible = isBlessed && healthPoints > 50 || isImmortal
 
     val player = Player()
+    player.castFireball()
 
     //Challenge Enhancing the Aura
     val karma = (Math.pow(Math.random(), (110 - healthPoints) / 100.0) * 20).toInt()
