@@ -16,6 +16,10 @@ fun main(args: Array<String>) {
     println(d6.rolledValue)
     println(d6.rolledValue)
 
+    //Sword
+    val sword = Sword("Excalibur")
+    println(sword.name)
+
 }//com.edgaradrian.mx.main
 
 private fun printPlayerStatus(
