@@ -1,15 +1,19 @@
 package com.edgaradrian.mx
 
-class Player {
-    var name = "edgar"
+class Player(_name: String,
+             _healthPoints: Int,
+             _isBlessed: Boolean,
+             _isImmortal: Boolean
+) {
+    var name = _name
         get() = field.capitalize()
         private set(value) {
             field = value.trim()
         }
 
-    var healthPoints = 90
-    val isBlessed = true
-    private val isImmortal = false
+    var healthPoints = _healthPoints
+    val isBlessed = _isBlessed
+    private val isImmortal = _isImmortal
 
     fun auraColor(): String {
         val auraVisible = isBlessed && healthPoints > 50 || isImmortal
