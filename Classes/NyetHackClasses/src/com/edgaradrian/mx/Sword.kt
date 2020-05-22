@@ -7,4 +7,8 @@ class Sword(_name: String) {
             field = value.toLowerCase().reversed().capitalize()
         }
 
+    init {
+        name = _name
+    }
+
 }//Sword
