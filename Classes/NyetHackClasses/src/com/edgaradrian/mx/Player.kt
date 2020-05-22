@@ -1,7 +1,7 @@
 package com.edgaradrian.mx
 
 class Player(_name: String,
-             var healthPoints: Int,
+             var healthPoints: Int = 100,
              val isBlessed: Boolean,
              private val isImmortal: Boolean
 ) {
@@ -12,7 +12,6 @@ class Player(_name: String,
         }
 
     constructor(name: String) : this(name,
-        healthPoints = 100,
         isBlessed = true,
         isImmortal = false) {
         if (name.toLowerCase() == "kar") healthPoints = 40
