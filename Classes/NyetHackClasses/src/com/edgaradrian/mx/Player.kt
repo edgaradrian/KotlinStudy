@@ -1,5 +1,7 @@
 package com.edgaradrian.mx
 
+import java.io.File
+
 class Player(_name: String,
              var healthPoints: Int = 100,
              val isBlessed: Boolean,
@@ -15,6 +17,13 @@ class Player(_name: String,
         isBlessed = true,
         isImmortal = false) {
         if (name.toLowerCase() == "kar") healthPoints = 40
+    }
+
+    val hometown = selectHometown()
+
+    init {
+        require(healthPoints > 0, { "healthPoints must be greater than zero." })
+        require(name.isNotBlank(), { "Player must have a name" })
     }
 
     fun auraColor(): String {
@@ -36,4 +45,11 @@ class Player(_name: String,
     }
 
     fun castFireball(numFireballs: Int = 2) = println("A glass of Fireball springs into existence. (x$numFireballs)")
+
+    private fun selectHometown() = File("data/towns.txt")
+        .readText()
+        .split("\n")
+        .shuffled()
+        .first()
+
 }//com.edgaradrian.mx.Player
