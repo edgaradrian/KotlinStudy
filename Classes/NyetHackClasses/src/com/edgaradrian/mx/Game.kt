@@ -2,7 +2,8 @@ package com.edgaradrian.mx
 
 fun main(args: Array<String>) {
 
-    val player = Player("Edgar", 90, true, false)
+    //val player = Player("Edgar", 90, true, false)
+    val player = Player("Edgar")
     player.castFireball()
 
     val auraColor = player.auraColor()
