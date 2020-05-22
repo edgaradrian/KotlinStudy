@@ -19,7 +19,7 @@ class Player(_name: String,
         if (name.toLowerCase() == "kar") healthPoints = 40
     }
 
-    val hometown = selectHometown()
+    val hometown by lazy { selectHometown() }
 
     init {
         require(healthPoints > 0, { "healthPoints must be greater than zero." })
