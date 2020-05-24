@@ -10,6 +10,11 @@ fun main(args: Array<String>) {
     println(currentRoom.description())
     println(currentRoom.load())
 
+    //Type Checking
+    var room = Room("Foyer")
+    println("room is Room? ${room is Room}")
+
+
     printPlayerStatus(player)
 
 }//com.edgaradrian.mx.main
