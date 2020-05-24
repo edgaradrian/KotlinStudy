@@ -15,7 +15,8 @@ fun main(args: Array<String>) {
     println("room is Room? ${room is Room}")
     println("room is TownSquare?: ${room is TownSquare}")
 
-
+    var townSquare = TownSquare()
+    println("townSquare is TownSquare ${townSquare is TownSquare}")
 
     printPlayerStatus(player)
 
