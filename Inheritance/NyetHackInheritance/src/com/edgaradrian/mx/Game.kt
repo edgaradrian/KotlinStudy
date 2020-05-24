@@ -13,6 +13,8 @@ fun main(args: Array<String>) {
     //Type Checking
     var room = Room("Foyer")
     println("room is Room? ${room is Room}")
+    println("room is TownSquare?: ${room is TownSquare}")
+
 
 
     printPlayerStatus(player)
