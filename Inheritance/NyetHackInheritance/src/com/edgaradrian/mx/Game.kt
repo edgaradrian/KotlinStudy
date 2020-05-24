@@ -40,5 +40,11 @@ private fun printPlayerStatus(
     println("${player.name} ${player.formatHealthStatus()}")
 }//com.edgaradrian.mx.printPlayerStatus
 
-
+fun printIsSourceOfBlessings(any: Any) {
+    val isSourceOfBlessings = if (any is Player) {
+        any.isBlessed
+    } else {
+        (any as Room).name == "Fount of Blessing"
+    }
+}//printIsSourceOfBlessings
 
