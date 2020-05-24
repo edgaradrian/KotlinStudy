@@ -20,8 +20,8 @@ fun main(args: Array<String>) {
     println("townSquare is Room ${townSquare is Room}")
 
     var className = when(townSquare) {
-        is TownSquare -> "TownSquare"
         is Room -> "Room"
+        is TownSquare -> "TownSquare"
         else -> throw IllegalArgumentException()
     }//className
     println(className)
