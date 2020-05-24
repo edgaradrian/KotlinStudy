@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
 
     var townSquare = TownSquare()
     println("townSquare is TownSquare ${townSquare is TownSquare}")
+    println("townSquare is Room ${townSquare is Room}")
 
     printPlayerStatus(player)
 
