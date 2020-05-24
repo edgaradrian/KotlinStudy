@@ -6,22 +6,11 @@ fun main(args: Array<String>) {
     val player = Player("Edgar")
     player.castFireball()
 
-    val auraColor = player.auraColor()
+    var currentRoom = Room("Foyer")
+    println(currentRoom.description())
+    println(currentRoom.load())
 
     printPlayerStatus(player)
-
-    //Computed properties
-    val d6 = Dice()
-    println(d6.rolledValue)
-    println(d6.rolledValue)
-    println(d6.rolledValue)
-
-    //Sword
-    val sword = Sword("Excalibur")
-    println(sword.name)
-
-    sword.name = "Gleipnir"
-    println(sword.name)
 
 }//com.edgaradrian.mx.main
 
