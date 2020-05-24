@@ -19,6 +19,13 @@ fun main(args: Array<String>) {
     println("townSquare is TownSquare ${townSquare is TownSquare}")
     println("townSquare is Room ${townSquare is Room}")
 
+    var className = when(townSquare) {
+        is TownSquare -> "TownSquare"
+        is Room -> "Room"
+        else -> throw IllegalArgumentException()
+    }//className
+    println(className)
+
     printPlayerStatus(player)
 
 }//com.edgaradrian.mx.main
