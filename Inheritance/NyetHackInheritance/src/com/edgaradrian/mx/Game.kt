@@ -2,14 +2,6 @@ package com.edgaradrian.mx
 
 fun main(args: Array<String>) {
 
-    //val player = Player("Edgar", 90, true, false)
-    val player = Player("Edgar")
-    player.castFireball()
-
-    var currentRoom: Room = TownSquare()
-    println(currentRoom.description())
-    println(currentRoom.load())
-
     //Type Checking
     var room = Room("Foyer")
     println("room is Room? ${room is Room}")
@@ -26,21 +18,11 @@ fun main(args: Array<String>) {
     }//className
     println(className)
 
-    printPlayerStatus(player)
-
     Game.play()
 
 }//com.edgaradrian.mx.main
 
-private fun printPlayerStatus(
-    player: Player
-) {
-    println(
-        "(Aura: ${player.auraColor()})" +
-                "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"
-    )
-    println("${player.name} ${player.formatHealthStatus()}")
-}//com.edgaradrian.mx.printPlayerStatus
+
 
 fun printIsSourceOfBlessings(any: Any) {
     val isSourceOfBlessings = if (any is Player) {
@@ -52,8 +34,12 @@ fun printIsSourceOfBlessings(any: Any) {
 
 object Game {
 
+    private val player = Player("Edgar")
+    private var currentRoom: Room = TownSquare()
+
     init {
         println("Welcome, adventurer.")
+        player.castFireball()
     }
 
     fun play() {
@@ -61,6 +47,16 @@ object Game {
             //Play
         }
     }//play
+
+    private fun printPlayerStatus(
+        player: Player
+    ) {
+        println(
+            "(Aura: ${player.auraColor()})" +
+                    "(Blessed: ${if (player.isBlessed) "YES" else "NO"})"
+        )
+        println("${player.name} ${player.formatHealthStatus()}")
+    }//com.edgaradrian.mx.printPlayerStatus
 
 }//object Game
 
