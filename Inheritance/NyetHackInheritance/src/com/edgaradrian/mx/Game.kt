@@ -44,7 +44,10 @@ object Game {
 
     fun play() {
         while (true) {
-            //Play
+            println(currentRoom.description())
+            println(currentRoom.load())
+
+            printPlayerStatus(player)
         }
     }//play
 
