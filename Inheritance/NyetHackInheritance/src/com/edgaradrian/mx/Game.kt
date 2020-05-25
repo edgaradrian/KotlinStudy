@@ -28,6 +28,8 @@ fun main(args: Array<String>) {
 
     printPlayerStatus(player)
 
+    Game.play()
+
 }//com.edgaradrian.mx.main
 
 private fun printPlayerStatus(
@@ -53,6 +55,12 @@ object Game {
     init {
         println("Welcome, adventurer.")
     }
+
+    fun play() {
+        while (true) {
+            //Play
+        }
+    }//play
 
 }//object Game
 
