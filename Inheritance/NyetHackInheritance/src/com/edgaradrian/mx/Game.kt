@@ -48,3 +48,7 @@ fun printIsSourceOfBlessings(any: Any) {
     }
 }//printIsSourceOfBlessings
 
+object Game {
+
+}//object Game
+
