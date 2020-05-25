@@ -50,5 +50,9 @@ fun printIsSourceOfBlessings(any: Any) {
 
 object Game {
 
+    init {
+        println("Welcome, adventurer.")
+    }
+
 }//object Game
 
