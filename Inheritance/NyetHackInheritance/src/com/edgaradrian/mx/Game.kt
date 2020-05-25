@@ -48,6 +48,9 @@ object Game {
             println(currentRoom.load())
 
             printPlayerStatus(player)
+
+            print("> Enter your command: ")
+            println("Last command: ${readLine()}")
         }
     }//play
 
