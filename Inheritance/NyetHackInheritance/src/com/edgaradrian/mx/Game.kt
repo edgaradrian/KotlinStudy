@@ -64,5 +64,11 @@ object Game {
         println("${player.name} ${player.formatHealthStatus()}")
     }//com.edgaradrian.mx.printPlayerStatus
 
+    private class GameInput(arg: String?) {
+        private val input = arg ?: ""
+        val command = input.split(" ")[0]
+        val argument = input.split(" ")
+    }//GameInput
+
 }//object Game
 
