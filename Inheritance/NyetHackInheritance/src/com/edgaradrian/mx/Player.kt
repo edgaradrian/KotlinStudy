@@ -8,15 +8,19 @@ class Player(_name: String,
              private val isImmortal: Boolean
 ) : Fightable {
 
-    override val diceCount: Int
-        get() = TODO("Not yet implemented")
+    override val diceCount = 3
 
-    override val diceSides: Int
-        get() = TODO("Not yet implemented")
+    override val diceSides = 6
 
     override fun attack(opponent: Fightable): Int {
-        TODO("Not yet implemented")
-    }
+        val damageDealt = if (isBlessed) {
+            damageRoll * 2
+        } else {
+            damageRoll
+        }
+        opponent.healthPoints -= damageDealt
+        return damageDealt
+    }//attack
 
     var name = _name
         get() = "${field.capitalize()} of $hometown"
