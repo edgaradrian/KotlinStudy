@@ -3,10 +3,10 @@ package com.edgaradrian.mx
 import java.io.File
 
 class Player(_name: String,
-             var healthPoints: Int = 100,
+             override var healthPoints: Int = 100,
              val isBlessed: Boolean,
              private val isImmortal: Boolean
-) {
+) : Fightable {
     var name = _name
         get() = "${field.capitalize()} of $hometown"
         private set(value) {
