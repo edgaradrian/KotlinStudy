@@ -3,9 +3,11 @@ package com.edgaradrian.mx
 open class Room(val name: String) {
 
     protected open val dangerLevel = 5
+    var monster: Monster? = Goblin()
 
     fun description() = "Room: $name\n" +
-            "Danger level: $dangerLevel"
+            "Danger level: $dangerLevel\n" +
+            "Crature: ${monster?.description ?: "none"}"
     open fun load() = "Mothing much to see here"
 
 }//class com.edgaradrian.mx.Room
