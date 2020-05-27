@@ -25,4 +25,9 @@ fun main(args: Array<String>) {
         println("You retrieve a $name from the box!")
     }
 
+    val coin = lootBoxOne.fetch {
+        Coin(it.value * 3)
+    }
+    coin?.let { println(it.value) }
+
 }//main
