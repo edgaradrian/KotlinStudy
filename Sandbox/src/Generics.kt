@@ -4,7 +4,12 @@ class LootBox<T>(item: T) {
 
     fun fetch(): T? {
         return loot.takeIf { open }
-    }
+    }//fetch
+
+    fun <R> fetch(lootModFunction: (T) -> R): R? {
+        return lootModFunction(loot).takeIf { open }
+    }//fetch
+
 }//LootBox
 
 class Fedora(val name: String, val value: Int)
