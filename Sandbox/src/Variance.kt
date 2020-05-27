@@ -1,4 +1,4 @@
-class Barrel<out T>(val item: T)
+class Barrel<in T>(item: T)
 
 fun main(args: Array<String>) {
     var fedoraBarrel: Barrel<Fedora> = Barrel(Fedora("a generic-looking fedora", 15))
