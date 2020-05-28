@@ -20,7 +20,6 @@ val patronMutableGold = mutableMapOf("Edgar" to 11.0, "Dulce" to 1.0 )
 var cask = 5
 var pint = .125
 
-private fun <T> Iterable<T>.random(): T = this.shuffled().first()
 
 fun main(args: Array<String>) {
 
