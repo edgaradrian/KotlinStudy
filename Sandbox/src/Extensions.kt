@@ -6,7 +6,7 @@ fun Any.easyPrint(): Any {
 }
 
 fun main(args: Array<String>) {
-    "Edgar has left the building".addEnthusiasm().easyPrint()
+    "Edgar has left the building".easyPrint().addEnthusiasm().easyPrint()
     87.easyPrint()
 }//main
 
