@@ -4,5 +4,6 @@ fun Any.easyPrint() = println(this)
 
 fun main(args: Array<String>) {
     "Edgar has left the building".addEnthusiasm().easyPrint()
+    87.easyPrint()
 }//main
 
