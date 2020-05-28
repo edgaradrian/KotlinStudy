@@ -68,8 +68,8 @@ fun main(args: Array<String>) {
     }
 
     (0..9).forEach {
-        val first = patronMutableList.shuffled().first()
-        var last = lastName.shuffled().first()
+        val first = patronMutableList.random()
+        var last = lastName.random()
         val name = "$first $last"
         uniquePatrons += name
     }
