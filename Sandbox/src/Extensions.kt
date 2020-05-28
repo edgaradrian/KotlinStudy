@@ -1,3 +1,6 @@
+val String.numVowels
+get() = count { "aeiou".contains(it) }
+
 fun String.addEnthusiasm(amount: Int = 1) = this + "!".repeat(amount)
 
 fun <T> T.easyPrint(): T {
