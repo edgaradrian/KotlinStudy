@@ -45,6 +45,11 @@ public class Jhava {
 
     public void offerFood() {
         Hero.handOverFood("pizza");
+    }//offerFood
+
+    public void extendHandInFriendship() throws Exception {
+        throw new Exception();
     }
+
 
 }
