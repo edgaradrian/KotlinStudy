@@ -27,6 +27,10 @@ fun main(args: Array<String>) {
 
 }//main
 
+val translator = { utterence: String ->
+    println(utterence.toLowerCase().capitalize())
+}//translator
+
 fun makeProclamation() = "Greetings, beast!"
 
 @JvmOverloads
