@@ -16,8 +16,13 @@ fun main(args: Array<String>) {
 
     adversary.offerFood()
 
-    adversary.extendHandInFriendship()
-    
+    try {
+        adversary.extendHandInFriendship()
+    } catch (e: Exception) {
+        println("Begone, foul beast!")
+    }
+
+
 }//main
 
 fun makeProclamation() = "Greetings, beast!"
