@@ -3,7 +3,7 @@ import com.sun.istack.internal.Nullable;
 
 public class Jhava {
 
-    public int hitPoints = 51999004;
+    private int hitPoints = 51999004;
 
     @NotNull
     public String utterGreeting() {
@@ -14,5 +14,9 @@ public class Jhava {
     public String determineFriendshipLevel() {
         return null;
     }
+
+    public int getHitPoints() {
+        return hitPoints;
+    }//getHitPoints
 
 }
