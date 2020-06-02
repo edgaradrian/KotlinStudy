@@ -6,6 +6,10 @@ public class Jhava {
     private int hitPoints = 51999004;
     private String greeting = "BLARGH";
 
+    public static void main(String[] args) {
+
+    }//main
+
     @NotNull
     public String utterGreeting() {
         return greeting;
