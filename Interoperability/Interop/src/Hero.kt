@@ -9,4 +9,7 @@ fun main(args: Array<String>) {
     println(adversaryHitPoints.dec())
     println(adversaryHitPoints.javaClass)
 
+    adversary.greeting = "Hello, Hero"
+    println(adversary.utterGreeting())
+
 }//main

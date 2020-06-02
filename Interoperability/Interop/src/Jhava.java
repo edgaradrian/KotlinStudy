@@ -4,7 +4,7 @@ import com.sun.istack.internal.Nullable;
 public class Jhava {
 
     private int hitPoints = 51999004;
-    private String greeting = "BLARGH"
+    private String greeting = "BLARGH";
 
     @NotNull
     public String utterGreeting() {
