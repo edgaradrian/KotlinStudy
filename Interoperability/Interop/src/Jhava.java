@@ -1,6 +1,8 @@
 import com.sun.istack.internal.NotNull;
 import com.sun.istack.internal.Nullable;
 
+import java.io.IOException;
+
 public class Jhava {
 
     private int hitPoints = 51999004;
@@ -51,5 +53,12 @@ public class Jhava {
         throw new Exception();
     }
 
+    public void apologize() {
+        try {
+            Hero.acceptApology();
+        } catch (IOException e) {
+            System.out.println("Caught!");
+        }
+    }
 
 }
