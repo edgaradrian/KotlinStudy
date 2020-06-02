@@ -17,3 +17,7 @@ fun main(args: Array<String>) {
 }//main
 
 fun makeProclamation() = "Greetings, beast!"
+
+fun handOverFood(leftHand: String = "berries", rightHand: String = "beef") {
+    println("Mmmmm... you hand over some delicious $leftHand and $rightHand.")
+}
