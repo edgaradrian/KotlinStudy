@@ -3,6 +3,7 @@ package com.edgaradrian.mx
 fun main() {
     printNodeExample()
     printPushOperation()
+    printAppendOperation()
 }//main
 
 private fun printNodeExample() {
@@ -24,3 +25,13 @@ private fun printPushOperation() {
 
     println(list)
 }//printPushOperation
+
+private fun printAppendOperation() {
+    println(">>>> Append Operation <<<<")
+    var list = LinkedList<Int>()
+    list.append(1)
+    list.append(2)
+    list.append(3)
+
+    println(list)
+}//printAppendOperation
