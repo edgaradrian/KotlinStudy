@@ -27,4 +27,16 @@ class LinkedList<T> {
         return this
     }//push
 
+    fun append(value: T) {
+        if (isEmpty()) {
+            push(value)
+            return
+        }
+
+        tail?.next = Node(value = value)
+
+        tail = tail?.next
+        size++
+    }//append
+
 }//LinkedList
