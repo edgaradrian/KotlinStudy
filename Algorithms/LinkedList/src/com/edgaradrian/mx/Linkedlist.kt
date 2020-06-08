@@ -18,12 +18,13 @@ class LinkedList<T> {
         }
     }//toString
 
-    fun push(value: T) {
+    fun push(value: T): LinkedList<T> {
         head = Node(value = value, next = head)
         if (tail == null) {
             tail = head
         }
         size++
+        return this
     }//push
 
 }//LinkedList

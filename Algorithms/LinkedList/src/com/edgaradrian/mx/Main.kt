@@ -3,7 +3,6 @@ package com.edgaradrian.mx
 fun main() {
     printNodeExample()
     printPushOperation()
-
 }//main
 
 private fun printNodeExample() {
@@ -21,9 +20,7 @@ private fun printNodeExample() {
 private fun printPushOperation() {
     println(">>>> Push Operation <<<<")
     val list = LinkedList<Int>()
-    list.push(3)
-    list.push(2)
-    list.push(1)
+    list.push(3).push(2).push(1)
 
     println(list)
 }//printPushOperation
