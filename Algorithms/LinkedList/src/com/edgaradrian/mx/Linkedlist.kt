@@ -64,4 +64,17 @@ class LinkedList<T> {
         return newNode
     }//insert
 
+    fun pop(): T? {
+        if(!isEmpty()) size --
+        val result = head?.value
+        head = head?.next
+
+        if(isEmpty()) {
+            tail = null
+        }
+
+        return result
+
+    }//pop
+
 }//LinkedList

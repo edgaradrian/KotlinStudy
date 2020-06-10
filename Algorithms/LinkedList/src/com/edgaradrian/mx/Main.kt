@@ -5,6 +5,7 @@ fun main() {
     printPushOperation()
     printAppendOperation()
     printInsertOperation()
+    printPopOperations()
 }//main
 
 private fun printNodeExample() {
@@ -52,3 +53,17 @@ private fun printInsertOperation() {
     println("After inserting $list")
 
 }//printInsertOperation
+
+private fun printPopOperations() {
+    println(">>>> Pop Operation <<<<")
+    var list = LinkedList<Int>()
+    list.push(3)
+    list.push(2)
+    list.push(1)
+
+    println("Before popping list: $list")
+    val poppedValue = list.pop()
+    println("After popping list: $list")
+    println("Popped value: $poppedValue")
+
+}//printPopOperations
