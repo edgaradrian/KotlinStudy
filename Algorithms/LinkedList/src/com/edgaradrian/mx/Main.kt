@@ -6,6 +6,7 @@ fun main() {
     printAppendOperation()
     printInsertOperation()
     printPopOperations()
+    printRemoveLastOperations()
 }//main
 
 private fun printNodeExample() {
@@ -67,3 +68,17 @@ private fun printPopOperations() {
     println("Popped value: $poppedValue")
 
 }//printPopOperations
+
+private fun printRemoveLastOperations() {
+    println(">>>> Remove Last Operation <<<<")
+    var list = LinkedList<Int>()
+    list.push(3)
+    list.push(2)
+    list.push(1)
+
+    println("Before removing last node: $list")
+    val removeValue =list.removeLast()
+
+    println("After removing last node: $list")
+    println("Removed value: $removeValue")
+}//printRemoveLastOperations
