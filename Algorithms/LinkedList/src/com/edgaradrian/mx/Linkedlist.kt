@@ -99,4 +99,19 @@ class LinkedList<T> {
 
     }//removeLast
 
+    fun removeAfter(node: Node<T>): T? {
+        val result = node.next?.value
+
+        if (node.next == tail) {
+            tail == node
+        }
+
+        if (node.next != null) {
+            size--
+        }
+
+        node.next = node.next?.next
+        return result
+    }//removeAfter
+
 }//LinkedList
