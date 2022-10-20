@@ -1,9 +1,9 @@
 fun main() {
-    println("Holaaaaaaaaaaaa... Enfermera")
+    println("Inicia el nivel")
     var level: Int = 3
     println(level)
 
     println("Subiendo de nivel")
-    level = 4
+    level += 1
     println(level)
 }//main
