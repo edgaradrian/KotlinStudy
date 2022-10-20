@@ -1,5 +1,9 @@
 fun main() {
     println("Inicia el nivel")
+
+    val name: String = "Edgar Adrián"
+    println(name)
+
     var level: Int = 3
     println(level)
 
