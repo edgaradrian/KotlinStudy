@@ -1,9 +1,9 @@
 
-const val NAME = "Edgar Adrián"
+const val NOMBRE = "Edgar Adrián"
 fun main() {
     println("Inicia el nivel")
 
-    println(NAME)
+    println(NOMBRE)
 
     var level = 3
     println(level)
