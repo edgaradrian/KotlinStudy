@@ -1,10 +1,10 @@
 fun main() {
     println("Inicia el nivel")
 
-    val name: String = "Edgar Adrián"
+    val name = "Edgar Adrián"
     println(name)
 
-    var level: Int = 3
+    var level = 3
     println(level)
 
     println("Subiendo de nivel")
