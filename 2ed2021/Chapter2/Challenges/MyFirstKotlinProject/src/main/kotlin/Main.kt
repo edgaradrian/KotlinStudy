@@ -18,4 +18,7 @@ fun main() {
     hasDogs += 1
     println("Ahora tiene " + hasDogs + " perro")
 
+    /* Challenge 2 - reversed */
+    println(NOMBRE.reversed())
+
 }//main
