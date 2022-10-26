@@ -8,9 +8,9 @@ fun main() {
     var level = 4
     println(level)
 
-    val booleanVal = true
+    val booleanVal = false
     val newBooleanVal = false
-    val name = "addick"
+    val name = "addickted"
 
     if (level == 1) {
         println("Está en el nivel uno")
@@ -19,9 +19,13 @@ fun main() {
 
         val logicalOperator = !newBooleanVal && (booleanVal || name == "addick")
 
-        if (logicalOperator) {
-            println("Bandera activada")
+        val myConditionalExpression: String = if (logicalOperator) {
+            "Bandera activada"
+        } else {
+            "Bandera no activada"
         }
+
+        println(myConditionalExpression)
 
     } else if (level == 6) {
         println("Nivel 6")
