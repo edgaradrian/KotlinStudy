@@ -12,27 +12,26 @@ fun main() {
     val newBooleanVal = false
     val name = "addickted"
 
-    if (level == 1) {
-        println("Está en el nivel uno")
+    val quest: String = if (level == 1) {
+        "Está en el nivel uno"
     } else if (level <= 5) {
-        println("Más de 1 hasta 5")
+        "Más de 1 hasta 5"
 
         val logicalOperator = !newBooleanVal && (booleanVal || name == "addick")
 
-        val myConditionalExpression: String = if (logicalOperator) {
+        if (logicalOperator) {
             "Bandera activada"
         } else {
             "Bandera no activada"
         }
 
-        println(myConditionalExpression)
-
     } else if (level == 6) {
-        println("Nivel 6")
+        "Nivel 6"
     } else {
-        println("Has superado el nivel 1")
+        "Has superado el nivel 1"
     }
 
+    println(quest)
     println("Subiendo de nivel")
     level += 1
     println(level)
