@@ -8,10 +8,17 @@ fun main() {
     var level = 6
     println(level)
 
+    val booleanVal = true
+
     if (level == 1) {
         println("Está en el nivel uno")
     } else if (level <= 5) {
         println("Más de 1 hasta 5")
+
+        if (booleanVal) {
+            println("Bandera activada")
+        }
+
     } else if (level == 6) {
         println("Nivel 6")
     } else {
