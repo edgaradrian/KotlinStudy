@@ -17,7 +17,9 @@ fun main() {
     } else if (level <= 5) {
         println("Más de 1 hasta 5")
 
-        if (!newBooleanVal && (booleanVal || name == "addick")) {
+        val logicalOperator = !newBooleanVal && (booleanVal || name == "addick")
+
+        if (logicalOperator) {
             println("Bandera activada")
         }
 
