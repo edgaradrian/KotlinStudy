@@ -5,7 +5,7 @@ fun main() {
 
     println(NOMBRE)
 
-    var level = 3
+    var level = 1
     println(level)
 
     if (level == 1) {
