@@ -1,4 +1,3 @@
-
 const val NOMBRE = "Edgar Adrián"
 fun main() {
     println("Inicia el nivel")
@@ -12,23 +11,19 @@ fun main() {
     val newBooleanVal = false
     val name = "addickted"
 
-    val quest: String = if (level == 1) {
-        "Está en el nivel uno"
-    } else if (level in 2..5) {
-        "Más de 1 hasta 5"
+    val quest: String = when (level) {
+        1 -> "Está en el nivel uno"
+        in 2..5 -> {
+            val logicalOperator = !newBooleanVal && (booleanVal || name == "addick")
 
-        val logicalOperator = !newBooleanVal && (booleanVal || name == "addick")
-
-        if (logicalOperator) {
-            "Bandera activada"
-        } else {
-            "Bandera no activada"
+            if (logicalOperator) {
+                "Más de 1 hasta 5 con operador true"
+            } else {
+                "Más de 1 hasta 5 con operador false"
+            }
         }
-
-    } else if (level == 6) {
-        "Nivel 6"
-    } else {
-        "Has superado el nivel 1"
+        6 -> "Nivel 6"
+        else -> "Has superado el nivel 1"
     }
 
     println(quest)
