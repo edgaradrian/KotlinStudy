@@ -14,7 +14,7 @@ fun main() {
 
     val quest: String = if (level == 1) {
         "Está en el nivel uno"
-    } else if (level <= 5) {
+    } else if (level in 2..5) {
         "Más de 1 hasta 5"
 
         val logicalOperator = !newBooleanVal && (booleanVal || name == "addick")
