@@ -1,23 +1,18 @@
 const val NOMBRE = "Edgar Adrián"
+var level = 4
 fun main() {
     println("Inicia el nivel")
 
-    println(NOMBRE)
+    read()
 
-    var level = 4
-    println(level)
-
-    val booleanVal = false
-    val newBooleanVal = false
-    val name = "addickted"
-
-    val quest: String = s(level, newBooleanVal, booleanVal, name)
-
-    println(quest)
     println("Subiendo de nivel")
     level += 1
     println(level)
 }//main
+
+private fun read() {
+    println(obtainQuest(level, false, false, "addickted"))
+}//read
 
 private fun obtainQuest(
     level: Int,
