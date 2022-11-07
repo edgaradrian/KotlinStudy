@@ -11,7 +11,7 @@ fun main() {
 }//main
 
 private fun read() {
-    println(obtainQuest(level, false, false, "addickted"))
+    println(obtainQuest(level, false, name = "addickted"))
 }//read
 
 private fun obtainQuest(
