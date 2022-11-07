@@ -17,7 +17,7 @@ private fun read() {
 private fun obtainQuest(
     level: Int,
     newBooleanVal: Boolean,
-    booleanVal: Boolean,
+    booleanVal: Boolean = false,
     name: String
 ): String {
     val quest: String = when (level) {
