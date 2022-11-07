@@ -19,7 +19,7 @@ private fun obtainQuest(
     newBooleanVal: Boolean = true,
     booleanVal: Boolean = false,
     name: String = "addick"
-) = when (level) {
+): String = when (level) {
         1 -> "Está en el nivel uno"
         in 2..5 -> {
             val logicalOperator = !newBooleanVal && (booleanVal || name == "addick")
