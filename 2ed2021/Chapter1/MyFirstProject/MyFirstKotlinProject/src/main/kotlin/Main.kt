@@ -11,14 +11,14 @@ fun main() {
 }//main
 
 private fun read() {
-    println(obtainQuest(level, false, name = "addickted"))
+    println(obtainQuest(level))
 }//read
 
 private fun obtainQuest(
     level: Int,
-    newBooleanVal: Boolean,
+    newBooleanVal: Boolean = true,
     booleanVal: Boolean = false,
-    name: String
+    name: String = "addick"
 ): String {
     val quest: String = when (level) {
         1 -> "Está en el nivel uno"
