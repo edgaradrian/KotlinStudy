@@ -1,11 +1,11 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    println("The hero starts the game")
 
     var playerLevel: Int = 4
     println(playerLevel)
 
     println("The hero killed the boss")
-    playerLevel = 5
+    playerLevel += 1
     println(playerLevel)
 
 }//main
