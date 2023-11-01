@@ -1,7 +1,7 @@
+const val heroName = "addick"
 fun main(args: Array<String>) {
     println("The hero starts the game")
 
-    val heroName = "addick"
     println(heroName)
 
     var playerLevel = 4
