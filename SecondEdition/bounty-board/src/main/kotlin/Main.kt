@@ -1,10 +1,10 @@
 fun main(args: Array<String>) {
     println("The hero starts the game")
 
-    val heroName: String = "addick"
+    val heroName = "addick"
     println(heroName)
 
-    var playerLevel: Int = 4
+    var playerLevel = 4
     println(playerLevel)
 
     println("The hero killed the boss")
