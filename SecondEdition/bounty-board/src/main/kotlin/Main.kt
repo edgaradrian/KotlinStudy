@@ -4,7 +4,7 @@ fun main(args: Array<String>) {
 
     println(heroName)
 
-    var playerLevel = 4
+    var playerLevel = 1
     println(playerLevel)
 
     if (playerLevel == 1) {
