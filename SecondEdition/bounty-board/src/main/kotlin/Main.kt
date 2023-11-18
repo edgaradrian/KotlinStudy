@@ -7,7 +7,14 @@ fun main(args: Array<String>) {
     var playerLevel = 4
     println(playerLevel)
 
-    println("The hero killed the boss")
+    if (playerLevel == 1) {
+        println("Inicia la aventura.")
+    } else {
+        println("Tiene la espada encantada.")
+    }
+
+    println("El tiempo pasa")
+    println("El heroe regresa por su búsqueda")
     playerLevel += 1
     println(playerLevel)
 
