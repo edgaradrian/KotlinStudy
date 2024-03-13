@@ -10,11 +10,12 @@ fun main(args: Array<String>) {
     val hasFriends = true
     val hasNewFriends = false
     val playerClass = "terran"
+    val canAskForHelp = hasFriends && (!hasNewFriends || playerClass == "terran")
 
     if (playerLevel == 1) {
         println("Inicia la aventura.")
     } else if (playerLevel <= 5) {
-        if (hasFriends && (!hasNewFriends || playerClass == "terran")) {
+        if (canAskForHelp) {
             println("Pide ayuda a tus amigos para defender al pueblo de la invasión")
         } else {
             println("Salva al pueblo de las invasiones.")
