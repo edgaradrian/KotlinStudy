@@ -4,11 +4,17 @@ fun main(args: Array<String>) {
 
     println(heroName)
 
-    var playerLevel = 1
+    var playerLevel = 5
     println(playerLevel)
 
     if (playerLevel == 1) {
         println("Inicia la aventura.")
+    } else if (playerLevel <= 5) {
+        println("Salva al pueblo de las invasiones.")
+    } else if (playerLevel == 6) {
+        println("Encuentra la espada encantada")
+    } else if (playerLevel == 7) {
+        println("Busca el artefacto de la creación")
     } else {
         println("Tiene la espada encantada.")
     }
