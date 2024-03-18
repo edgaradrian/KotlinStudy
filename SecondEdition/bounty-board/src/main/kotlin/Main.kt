@@ -15,11 +15,12 @@ fun main(args: Array<String>) {
     if (playerLevel == 1) {
         println("Inicia la aventura.")
     } else if (playerLevel <= 5) {
-        if (canAskForHelp) {
-            println("Pide ayuda a tus amigos para defender al pueblo de la invasión")
+        val quest: String = if (canAskForHelp) {
+            "Pide ayuda a tus amigos para defender al pueblo de la invasión"
         } else {
-            println("Salva al pueblo de las invasiones.")
+            "Salva al pueblo de las invasiones."
         }
+        println(quest)
     } else if (playerLevel == 6) {
         println("Encuentra la espada encantada")
     } else if (playerLevel == 7) {
