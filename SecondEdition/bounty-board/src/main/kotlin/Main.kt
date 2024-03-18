@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
 
     val quest: String = if (playerLevel == 1) {
         "Inicia la aventura."
-    } else if (playerLevel <= 5) {
+    } else if (playerLevel in 2..5) {
         if (canAskForHelp) {
             "Pide ayuda a tus amigos para defender al pueblo de la invasión"
         } else {
