@@ -14,13 +14,14 @@ fun main(args: Array<String>) {
     val playerClass = "terran"
     val canAskForHelp = hasFriends && (!hasNewFriends || playerClass == "terran")
 
-    val quest: String = obtainQuest(playerLevel, canAskForHelp)
+    readBountyBoard()
 
     println("El tiempo pasa")
     println("El heroe regresa por su búsqueda")
     playerLevel += 1
     println(playerLevel)
 
+    readBountyBoard()
 }//main
 
 private fun obtainQuest(
