@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
 private fun obtainQuest(
     playerLevel: Int,
     canAskForHelp: Boolean,
-    hasFriends: Boolean,
+    hasFriends: Boolean = false,
     hasNewFriends: Boolean = false
 ): String {
     val quest: String = when (playerLevel) {
@@ -49,5 +49,5 @@ private fun obtainQuest(
 
 private fun readBountyBoard() {
     println("El heroe lee las recompensas")
-    println(obtainQuest(playerLevel = playerLevel, canAskForHelp = true, hasFriends = true, hasNewFriends = true))
+    println(obtainQuest(playerLevel = playerLevel, canAskForHelp = true))
 }//readBountyBoard
