@@ -24,8 +24,7 @@ private fun obtainQuest(
     canAskForHelp: Boolean,
     hasFriends: Boolean = false,
     hasNewFriends: Boolean = false
-): String {
-    return when (playerLevel) {
+) = when (playerLevel) {
         1 -> "Inicia la aventura."
         in 2..5 ->
             if (canAskForHelp) {
@@ -43,7 +42,6 @@ private fun obtainQuest(
         6 -> "Encuentra la espada encantada"
         7 -> "Busca el artefacto de la creación"
         else -> "Tiene la espada encantada."
-    }
 }//obtainQuest
 
 private fun readBountyBoard() {
