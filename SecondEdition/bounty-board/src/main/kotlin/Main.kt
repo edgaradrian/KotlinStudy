@@ -1,3 +1,5 @@
+import javax.swing.text.StyledEditorKit.BoldAction
+
 const val heroName = "addick"
 var playerLevel = 5
 
@@ -5,14 +7,7 @@ fun main(args: Array<String>) {
     println("The hero starts the game")
 
     println(heroName)
-
-
     println(playerLevel)
-
-    val hasFriends = true
-    val hasNewFriends = false
-    val playerClass = "terran"
-    val canAskForHelp = hasFriends && (!hasNewFriends || playerClass == "terran")
 
     readBountyBoard()
 
@@ -26,13 +21,21 @@ fun main(args: Array<String>) {
 
 private fun obtainQuest(
     playerLevel: Int,
-    canAskForHelp: Boolean
+    canAskForHelp: Boolean,
+    hasFriends: Boolean,
+    hasNewFriends: Boolean = false
 ): String {
     val quest: String = when (playerLevel) {
         1 -> "Inicia la aventura."
         in 2..5 ->
             if (canAskForHelp) {
-                "Pide ayuda a tus amigos para defender al pueblo de la invasión"
+                if (hasFriends) {
+                    "Pide ayuda a tus amigos para defender al pueblo de la invasión"
+                } else if (hasNewFriends) {
+                    "También pide ayuda a sus nuevos amigos"
+                } else {
+                    "Tendrá que enfrentar los peligros solo"
+                }
             } else {
                 "Salva al pueblo de las invasiones."
             }
@@ -46,5 +49,5 @@ private fun obtainQuest(
 
 private fun readBountyBoard() {
     println("El heroe lee las recompensas")
-    println(obtainQuest(playerLevel = playerLevel, canAskForHelp = true))
+    println(obtainQuest(playerLevel = playerLevel, canAskForHelp = true, hasFriends = true, hasNewFriends = true))
 }//readBountyBoard
