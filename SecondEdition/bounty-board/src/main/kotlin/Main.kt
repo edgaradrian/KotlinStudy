@@ -1,10 +1,12 @@
 const val heroName = "addick"
+var playerLevel = 5
+
 fun main(args: Array<String>) {
     println("The hero starts the game")
 
     println(heroName)
 
-    var playerLevel = 5
+
     println(playerLevel)
 
     val hasFriends = true
@@ -14,9 +16,6 @@ fun main(args: Array<String>) {
 
     val quest: String = obtainQuest(playerLevel, canAskForHelp)
 
-    println("El heroe lee las recompensas: ")
-    println(quest)
-
     println("El tiempo pasa")
     println("El heroe regresa por su búsqueda")
     playerLevel += 1
@@ -24,7 +23,10 @@ fun main(args: Array<String>) {
 
 }//main
 
-private fun obtainQuest(playerLevel: Int, canAskForHelp: Boolean): String {
+private fun obtainQuest(
+    playerLevel: Int,
+    canAskForHelp: Boolean
+): String {
     val quest: String = when (playerLevel) {
         1 -> "Inicia la aventura."
         in 2..5 ->
@@ -40,3 +42,8 @@ private fun obtainQuest(playerLevel: Int, canAskForHelp: Boolean): String {
     }
     return quest
 }//obtainQuest
+
+private fun readBountyBoard() {
+    println("El heroe lee las recompensas")
+    println(obtainQuest(playerLevel = playerLevel, canAskForHelp = true))
+}//readBountyBoard
