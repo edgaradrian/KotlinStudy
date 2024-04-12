@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     readBountyBoard()
 
     println("El tiempo pasa")
-    println("El heroe regresa por su búsqueda")
+    println("$heroName regresa por su búsqueda")
     playerLevel += 1
     println(playerLevel)
 
@@ -45,6 +45,6 @@ private fun obtainQuest(
 }//obtainQuest
 
 private fun readBountyBoard() {
-    println("El heroe lee las recompensas")
+    println("$heroName lee las recompensas")
     println(obtainQuest(playerLevel = playerLevel, canAskForHelp = true))
 }//readBountyBoard
