@@ -5,9 +5,9 @@ var playerLevel = 5
 
 fun main(args: Array<String>) {
     println("$heroName starts the game")
-
-    println(heroName)
-    println(playerLevel)
+    println("¿Qué nivel tiene $heroName? ")
+    val input = readLine()
+    println("$heroName tiene el nivel $input")
 
     readBountyBoard()
 
