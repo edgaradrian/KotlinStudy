@@ -4,7 +4,7 @@ const val heroName = "addick"
 var playerLevel = 5
 
 fun main(args: Array<String>) {
-    println(heroName + " starts the game")
+    println("$heroName starts the game")
 
     println(heroName)
     println(playerLevel)
