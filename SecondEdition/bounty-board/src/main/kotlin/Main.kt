@@ -47,7 +47,7 @@ private fun obtainQuest(
 
         6 -> "Encuentra la espada encantada"
         7 -> "Busca el artefacto de la creación"
-        else -> "Tiene la espada encantada."
+        else -> null
 }//obtainQuest
 
 private fun readBountyBoard() {
