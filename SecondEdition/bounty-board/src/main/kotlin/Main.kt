@@ -68,3 +68,6 @@ private fun readBountyBoard() {
 
     println(message)
 }//readBountyBoard
+
+class InvalidPlayerLevelException() :
+        IllegalArgumentException("El nivel del jugador debe ser al menos 1.")
