@@ -30,7 +30,7 @@ private fun obtainQuest(
     canAskForHelp: Boolean,
     hasFriends: Boolean = false,
     hasNewFriends: Boolean = false
-) = when (playerLevel) {
+): String? = when (playerLevel) {
         1 -> "Inicia la aventura."
         in 2..5 ->
             if (canAskForHelp) {
