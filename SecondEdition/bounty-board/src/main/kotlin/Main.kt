@@ -1,13 +1,13 @@
 import javax.swing.text.StyledEditorKit.BoldAction
 
 const val heroName = "addick"
-var playerLevel = 5
+var playerLevel = 0
 
 fun main(args: Array<String>) {
     println("$heroName starts the game")
     println("¿Qué nivel tiene $heroName? ")
-    val input = readLine()
-    println("$heroName tiene el nivel $input")
+    playerLevel = readLine()!!.toInt()
+    println("$heroName tiene el nivel $playerLevel")
 
     readBountyBoard()
 
