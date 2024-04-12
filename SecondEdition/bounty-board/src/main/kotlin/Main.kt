@@ -26,8 +26,8 @@ private fun obtainQuest(
     hasFriends: Boolean = false,
     hasNewFriends: Boolean = false
 ): String? {
-    require(playerLevel > 0) {
-        "El nivel del jugador debe ser al menos 1."
+    if(playerLevel <= 0) {
+        throw InvalidPlayerLevelException()
     }
 
     return when (playerLevel) {
