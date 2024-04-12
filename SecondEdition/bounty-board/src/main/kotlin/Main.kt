@@ -51,8 +51,11 @@ private fun obtainQuest(
 }//obtainQuest
 
 private fun readBountyBoard() {
+
+    val quest: String? = obtainQuest(playerLevel = playerLevel, canAskForHelp = true)
+
     println("""
         |$heroName lee las recompensas
-        | "${obtainQuest(playerLevel = playerLevel, canAskForHelp = true)}"
+        | "$quest"
     """.trimMargin())
 }//readBountyBoard
