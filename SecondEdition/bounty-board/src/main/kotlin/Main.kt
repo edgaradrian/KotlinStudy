@@ -25,7 +25,12 @@ private fun obtainQuest(
     canAskForHelp: Boolean,
     hasFriends: Boolean = false,
     hasNewFriends: Boolean = false
-): String? = when (playerLevel) {
+): String? {
+    if (playerLevel <= 0) {
+        throw IllegalArgumentException("El jugador debe tener por lo menos nivel 1")
+    }
+
+    return when (playerLevel) {
         1 -> "It's Time Atxion"
         in 2..5 ->
             if (canAskForHelp) {
@@ -43,7 +48,8 @@ private fun obtainQuest(
         6 -> "Encuentra la espada encantada"
         7 -> "Busca el artefacto de la creación"
         else -> null
-}//obtainQuest
+    }//obtainQuest
+}
 
 private fun readBountyBoard() {
 
