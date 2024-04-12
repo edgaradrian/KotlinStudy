@@ -31,7 +31,7 @@ private fun obtainQuest(
     hasFriends: Boolean = false,
     hasNewFriends: Boolean = false
 ): String? = when (playerLevel) {
-        1 -> "Inicia la aventura."
+        1 -> "It's Time Atxion"
         in 2..5 ->
             if (canAskForHelp) {
                 if (hasFriends) {
@@ -53,9 +53,10 @@ private fun obtainQuest(
 private fun readBountyBoard() {
 
     val quest: String? = obtainQuest(playerLevel = playerLevel, canAskForHelp = true)
+    val censoredQuest = quest.replace("Atxion", "xxxxxx")
 
     println("""
         |$heroName lee las recompensas
-        | "$quest"
+        | "$censoredQuest"
     """.trimMargin())
 }//readBountyBoard
