@@ -26,8 +26,8 @@ private fun obtainQuest(
     hasFriends: Boolean = false,
     hasNewFriends: Boolean = false
 ): String? {
-    if (playerLevel <= 0) {
-        throw IllegalArgumentException("El jugador debe tener por lo menos nivel 1")
+    require(playerLevel > 0) {
+        "El nivel del jugador debe ser al menos 1."
     }
 
     return when (playerLevel) {
@@ -53,17 +53,18 @@ private fun obtainQuest(
 
 private fun readBountyBoard() {
 
-    try {
+    val message: String = try {
         val quest: String? = obtainQuest(playerLevel = playerLevel, canAskForHelp = true)
-        val message: String = quest?.replace("Atxion", "xxxxxx")?.let { censoredQuest ->
+        quest?.replace("Atxion", "xxxxxx")?.let { censoredQuest ->
             """
         |$heroName lee las recompensas
         | "$censoredQuest"
         """.trimMargin()
         } ?: "$heroName lee las recompensas pero no hay"
 
-        println(message)
     } catch (e: Exception) {
-
+        "$heroName no puede leer las recompensas"
     }
+
+    println(message)
 }//readBountyBoard
