@@ -53,12 +53,12 @@ private fun obtainQuest(
 private fun readBountyBoard() {
 
     val quest: String? = obtainQuest(playerLevel = playerLevel, canAskForHelp = true)
-    val message: String? = quest?.replace("Atxion", "xxxxxx")?.let { censoredQuest ->
+    val message: String = quest?.replace("Atxion", "xxxxxx")?.let { censoredQuest ->
         """
         |$heroName lee las recompensas
         | "$censoredQuest"
         """.trimMargin()
-    }
+    } ?: "$heroName lee las recompensas pero no hay"
 
     println(message)
 }//readBountyBoard
