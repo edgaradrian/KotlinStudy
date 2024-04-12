@@ -45,6 +45,8 @@ private fun obtainQuest(
 }//obtainQuest
 
 private fun readBountyBoard() {
-    println("$heroName lee las recompensas")
-    println("\t\"${obtainQuest(playerLevel = playerLevel, canAskForHelp = true)}\"")
+    println("""
+        |$heroName lee las recompensas
+        | "${obtainQuest(playerLevel = playerLevel, canAskForHelp = true)}"
+    """.trimMargin())
 }//readBountyBoard
