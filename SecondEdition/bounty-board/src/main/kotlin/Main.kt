@@ -6,7 +6,13 @@ var playerLevel = 0
 fun main(args: Array<String>) {
     println("$heroName starts the game")
     println("¿Qué nivel tiene $heroName? ")
-    playerLevel = readLine()!!.toInt()
+    val playerLevelInput = readLine()!!
+    playerLevel = if (playerLevelInput.matches("""\d+""".toRegex())) {
+        playerLevelInput.toInt()
+    } else {
+        1
+    }
+
     println("$heroName tiene el nivel $playerLevel")
 
     readBountyBoard()
