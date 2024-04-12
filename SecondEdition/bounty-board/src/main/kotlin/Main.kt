@@ -46,5 +46,5 @@ private fun obtainQuest(
 
 private fun readBountyBoard() {
     println("$heroName lee las recompensas")
-    println(obtainQuest(playerLevel = playerLevel, canAskForHelp = true))
+    println("\t\"${obtainQuest(playerLevel = playerLevel, canAskForHelp = true)}\"")
 }//readBountyBoard
