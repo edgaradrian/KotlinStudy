@@ -12,3 +12,10 @@ fun main() {
     narrate("$heroName llega al centro")
 }//main
 
+private fun createTitle(name: String): String {
+    return when {
+        name.count { it.lowercase() in "aeiou" } > 4 -> "Maestro de las vocales"
+        else -> "El héroe renombrado"
+    }
+}//createTitle
+
