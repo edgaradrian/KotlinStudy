@@ -4,3 +4,4 @@ fun main() {
     val heroName = readLine() ?: "Édgar"
 
 }//main
+
