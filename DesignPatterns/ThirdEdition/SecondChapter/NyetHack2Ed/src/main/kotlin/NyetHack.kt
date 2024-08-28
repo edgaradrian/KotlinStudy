@@ -14,8 +14,11 @@ fun main() {
 
 private fun createTitle(name: String): String {
     return when {
+        name.count() > 8 -> "El Verboso"
+        name == name.reversed() -> "Portador de Palíndromos."
         name.all { it.isDigit() } -> "El Identificador"
         name.none { it.isLetter() } -> "Sin Letras"
+        name.first().isUpperCase() -> "El llamativo"
         name.count { it.lowercase() in "aeiou" } > 4 -> "Maestro de las vocales"
         else -> "El héroe renombrado"
     }
