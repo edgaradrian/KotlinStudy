@@ -9,11 +9,13 @@ fun main() {
     }
 
     changeNarratorMood()
-    narrate("$heroName llega al centro")
+    narrate("$heroName, ${createTitle(heroName)} llega al centro")
 }//main
 
 private fun createTitle(name: String): String {
     return when {
+        name.all { it.isDigit() } -> "El Identificador"
+        name.none { it.isLetter() } -> "Sin Letras"
         name.count { it.lowercase() in "aeiou" } > 4 -> "Maestro de las vocales"
         else -> "El héroe renombrado"
     }
