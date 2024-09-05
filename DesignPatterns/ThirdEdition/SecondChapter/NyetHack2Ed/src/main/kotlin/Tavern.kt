@@ -5,6 +5,13 @@ fun visitTavern() {
     narrate("$heroName entra a $TAVERN_NAME")
 
     val patrons= listOf("Edgar", "Adrián", "Astrid")
-    println(patrons[0])
+
+    val astridMessage = if (patrons.contains("Astrid")) {
+        "$TAVERN_MASTER dice: Astrid está atrás jugando cartas"
+    } else {
+        "$TAVERN_MASTER dice: Astrid no está aquí."
+    }
+
+    println(astridMessage)
 
 }//visitTavern
