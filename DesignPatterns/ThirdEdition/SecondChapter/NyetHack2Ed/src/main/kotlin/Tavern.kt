@@ -14,4 +14,12 @@ fun visitTavern() {
 
     println(astridMessage)
 
+    val otherMessage = if (patrons.containsAll(listOf("Edgar", "Adrián"))) {
+        "$TAVERN_MASTER dice: Edgar y Adrián están sentados en la barra."
+    } else {
+        "$TAVERN_MASTER dice: Edgar y Adrián no están juntos ahora."
+    }
+
+    println(otherMessage)
+
 }//visitTavern
