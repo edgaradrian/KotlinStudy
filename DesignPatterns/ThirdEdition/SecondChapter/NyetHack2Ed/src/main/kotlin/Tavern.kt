@@ -7,8 +7,15 @@ private val menuData = File("data/tavern-menu-data.txt")
     .readText()
     .split("\n")
 
+private val menuItems = List(menuData.size) { index ->
+    val (type, name, price) = menuData[index].split(",")
+    name
+}
+
 fun visitTavern() {
     narrate("$heroName entra a $TAVERN_NAME")
+    narrate("Hay diferentes artículos a la venta:")
+    println(menuItems)
 
     val patrons= mutableListOf("Edgar", "Adrián", "Astrid")
 
@@ -31,10 +38,6 @@ fun visitTavern() {
     patrons.forEachIndexed { index, patron ->
         println("Buenas noches, $patron eres el #${index + 1} en la fila")
         placeOrder(patron, "la bebida del Dragón")
-    }
-
-    menuData.forEachIndexed { index, data ->
-        println("$index : $data")
     }
 
 }//visitTavern
