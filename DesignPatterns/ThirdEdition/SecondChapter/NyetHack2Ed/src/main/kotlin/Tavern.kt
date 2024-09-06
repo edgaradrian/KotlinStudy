@@ -22,7 +22,7 @@ fun visitTavern() {
 
     println(otherMessage)
 
-    for (patron in patrons) {
+    patrons.forEach { patron ->
         println("Buenas noches, $patron")
     }
 
