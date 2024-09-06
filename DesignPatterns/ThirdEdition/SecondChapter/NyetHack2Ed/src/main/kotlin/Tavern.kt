@@ -24,6 +24,12 @@ fun visitTavern() {
 
     patrons.forEachIndexed { index, patron ->
         println("Buenas noches, $patron eres el #${index + 1} en la fila")
+        placeOrder(patron, "la bebida del Dragón")
     }
 
 }//visitTavern
+
+private fun placeOrder(patronName: String, menuItemName: String) {
+    narrate("$patronName habla con $TAVERN_MASTER para realizar un pedido")
+    narrate("$TAVERN_MASTER entrega $menuItemName a $patronName ")
+}//placeOrder
