@@ -28,4 +28,8 @@ fun visitTavern() {
     patrons.add("Abril")
     println(patrons)
 
+    narrate("Abril (VIP) ingresa a la Taverna $TAVERN_NAME")
+    patrons.add(0, "Abril")
+    println(patrons)
+
 }//visitTavern
