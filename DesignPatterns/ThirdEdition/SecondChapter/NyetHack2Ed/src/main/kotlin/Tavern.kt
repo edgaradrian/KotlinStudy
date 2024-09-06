@@ -22,7 +22,7 @@ fun visitTavern() {
 
     val patrons: MutableSet<String> = mutableSetOf()
 
-    repeat(10) {
+    while(patrons.size < 10) {
         patrons += "${firstNames.random()} ${lastNames.random()}"
     }
 
