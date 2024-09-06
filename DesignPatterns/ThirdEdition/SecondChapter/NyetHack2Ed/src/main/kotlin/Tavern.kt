@@ -33,6 +33,10 @@ fun visitTavern() {
         placeOrder(patron, "la bebida del Dragón")
     }
 
+    menuData.forEachIndexed { index, data ->
+        println("$index : $data")
+    }
+
 }//visitTavern
 
 private fun placeOrder(patronName: String, menuItemName: String) {
