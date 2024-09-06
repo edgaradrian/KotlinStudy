@@ -22,8 +22,8 @@ fun visitTavern() {
 
     println(otherMessage)
 
-    patrons.forEach { patron ->
-        println("Buenas noches, $patron")
+    patrons.forEachIndexed { index, patron ->
+        println("Buenas noches, $patron eres el #${index + 1} en la fila")
     }
 
 }//visitTavern
