@@ -8,7 +8,7 @@ private val menuData = File("data/tavern-menu-data.txt")
     .split("\n")
 
 private val menuItems = List(menuData.size) { index ->
-    val (type, name, price) = menuData[index].split(",")
+    val (_, name, _) = menuData[index].split(",")
     name
 }
 
