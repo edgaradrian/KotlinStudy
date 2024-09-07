@@ -18,7 +18,8 @@ private val menuItems = List(menuData.size) { index ->
 fun visitTavern() {
     narrate("$heroName entra a $TAVERN_NAME")
     narrate("Hay diferentes artículos a la venta:")
-    narrate(menuItems.toString())
+    //narrate(menuItems.toString())
+    narrate(fancyMenuLook())
 
     val patrons: MutableSet<String> = mutableSetOf()
 
@@ -39,3 +40,20 @@ private fun placeOrder(patronName: String, menuItemName: String) {
     narrate("$patronName habla con $TAVERN_MASTER para realizar un pedido")
     narrate("$TAVERN_MASTER entrega $menuItemName a $patronName ")
 }//placeOrder
+
+private fun fancyMenuLook(): String {
+    var menu = "\n*** Bienvenidos a $TAVERN_NAME *** \n"
+
+    val map = menuData.map { it.split(",")[1] to it.split(",")[2] }.toMap()
+
+    for (item in menuItems) {
+        val itemSize = item.length
+        val price = map[item].toString()
+        val times = 34 - (itemSize + price.length)
+
+        menu += "\n$item${".".repeat(times)}$price"
+    }
+
+    menu += "\n"
+    return menu
+}//fancyMenuLook
